@@ -6,10 +6,12 @@ blockquote,q{quotes:none;}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
 table{border-collapse:collapse;border-spacing:0;}
 .wrap{max-width:940px;padding:0 10px;margin:0 auto;clear:both;}
-body{font-family:"proxima-nova-1","proxima-nova-2",helvetica,sans-serif;}body header{background-color:#231F1F;color:#fff;padding:60px 02.1276596% 40px;}body header h1{text-transform:uppercase;letter-spacing:2px;font-weight:600;text-shadow:-1px -1px 1px #231f20;}body header h1 i{color:#e31837;}
-body section{background-color:#fff;padding:02.1276596%;}body section article{margin:0 0 20px 0;}body section article aside{float:none;width:auto;margin:0 0 20px 0;line-height:1.5;}
-body section article header{padding:20px 0;background-color:#fff;text-align:left;}body section article header h2{color:#000;margin:0 0 15px 0;font-size:20px;font-weight:normal;line-height:1.3;}
-body section article p{margin:0 0 20px 0;font-size:14px;line-height:1.5;color:#666;}
-body section article footer{font-size:14px;color:#999;background-color:#fff;border:none;}
-body footer{background:#eee;border-top:1px dashed #ccc;}
-@media screen and (min-width:768px){body section article{margin:0 0 20px 20%;}body section article aside{float:left;width:20%;margin-left:-25%;font-size:12px;line-height:1.8;color:#999;}}.oldie .wrap{width:940px;}
+body{font-family:"proxima-nova-1","proxima-nova-2",helvetica,sans-serif;font-size:16px;line-height:24px;color:#231f20;}body a{color:#EF3E42;text-decoration:none;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
+body a:hover{color:#bbb;}
+body section{margin-top:20px;-webkit-animation:2s ease;-moz-animation:2s ease;-ms-animation:2s ease;-o-animation:2s ease;animation:2s ease;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}body section header{border-bottom:1px solid #ddd;padding:10px 0;}body section header h1{text-transform:uppercase;letter-spacing:2px;font-weight:600;text-shadow:-1px -1px 1px #ffffff;}body section header h1 i{font-style:normal;color:#EF3E42;}
+body section article{padding:20px 0;}body section article nav ul{overflow:hidden;}body section article nav ul li{float:none;width:97.8723404%;margin:0 01.0638298% 40px;-webkit-animation:2s ease;-moz-animation:2s ease;-ms-animation:2s ease;-o-animation:2s ease;animation:2s ease;-webkit-transition:all 0.5s ease-in-out;-moz-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}body section article nav ul li header{margin:0 0 10px;padding:0;border:none;}body section article nav ul li header h1{text-transform:uppercase;letter-spacing:2px;font-weight:600;text-shadow:-1px -1px 1px #ffffff;}
+body section article nav ul li p{margin-bottom:20px;}
+body section article nav ul li aside ul li:first-child.tweet_first{width:100%;margin:0;}
+body section article nav ul li ol li{float:none;margin:0;}body section article nav ul li ol li a{color:#777;}
+body section article footer{color:#ccc;font-size:85%;margin:20px 02.1276596% 0;}body section article footer a{color:#ccc;}
+@media all and (min-width:768px){body section{margin-top:100px;-webkit-animation:2s ease;-moz-animation:2s ease;-ms-animation:2s ease;-o-animation:2s ease;animation:2s ease;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}body section article nav ul li{float:left;width:22.8723404%;margin:0 01.0638298%;-webkit-animation:2s ease;-moz-animation:2s ease;-ms-animation:2s ease;-o-animation:2s ease;animation:2s ease;-webkit-transition:all 0.5s ease-in-out;-moz-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;}body section article nav ul li aside ul li:first-child.tweet_first{width:100%;} body section article nav ul li:first-child{width:45.7446809%;margin:0 01.0638298% 0 0;}}.oldie .wrap{width:940px;}
