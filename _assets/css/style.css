@@ -11,6 +11,7 @@ body a:hover{color:#bbb;}
 body section{margin-top:20px;-webkit-animation:2s ease;-moz-animation:2s ease;-ms-animation:2s ease;-o-animation:2s ease;animation:2s ease;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;transition:all .3s linear;}body section header{border-bottom:1px solid #ddd;padding:10px 0;}body section header h1{text-transform:uppercase;letter-spacing:2px;font-weight:600;text-shadow:-1px -1px 1px #ffffff;}body section header h1 i{font-style:normal;color:#EF3E42;}
 body section article{padding:20px 0;}body section article nav ul{overflow:hidden;}body section article nav ul li{float:none;width:97.8723404%;margin:0 01.0638298% 40px;-webkit-animation:2s ease;-moz-animation:2s ease;-ms-animation:2s ease;-o-animation:2s ease;animation:2s ease;-webkit-transition:all .5s linear;-moz-transition:all .5s linear;transition:all .5s linear;}body section article nav ul li header{margin:0 0 10px;padding:0;border:none;}body section article nav ul li header h1{text-transform:uppercase;letter-spacing:2px;font-weight:600;text-shadow:-1px -1px 1px #ffffff;}
 body section article nav ul li p{margin-bottom:20px;}
+body section article nav ul li aside ul li p{margin:0;}
 body section article nav ul li aside ul li:first-child.tweet_first{width:100%;margin:0;}
 body section article nav ul li ol li{float:none;margin:0;}body section article nav ul li ol li a{color:#777;}
 body section article footer{color:#ccc;font-size:85%;margin:20px 02.1276596% 0;}body section article footer a{color:#ccc;}
