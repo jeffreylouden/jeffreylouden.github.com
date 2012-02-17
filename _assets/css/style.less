@@ -76,6 +76,7 @@ body {
 	
 	section {
 		margin-top: 20px;
+		padding: 20px 0;
 		-webkit-animation: 2s ease;
 	   	-moz-animation: 2s ease;
 	    -ms-animation: 2s ease;
@@ -100,85 +101,80 @@ body {
 					color: #EF3E42;	
 				}
 			}
-		}
+		}			
+		nav {
+			ul {
+				overflow: hidden;
 
-		article {
-			padding: 20px 0;
+				li {
+					float: none;
+					width: 97.8723404%;
+					margin: 0 01.0638298% 40px;
+					-webkit-animation: 2s ease;
+					-moz-animation: 2s ease;
+					-ms-animation: 2s ease;
+					-o-animation: 2s ease;
+					animation: 2s ease;
+					-webkit-transition: all .5s linear;
+					-moz-transition: all .5s linear;
+					transition: all .5s linear;
+					
+					header {
+							margin: 0 0 10px;
+							padding: 0;
+							border:none;
 
-			nav {
-				ul {
-					overflow: hidden;
-
-					li {
-						float: none;
-						width: 97.8723404%;
-						margin: 0 01.0638298% 40px;
-						-webkit-animation: 2s ease;
-						-moz-animation: 2s ease;
-						-ms-animation: 2s ease;
-						-o-animation: 2s ease;
-						animation: 2s ease;
-						-webkit-transition: all .5s linear;
-						-moz-transition: all .5s linear;
-						transition: all .5s linear;
-						
-						header {
-								margin: 0 0 10px;
-								padding: 0;
-								border:none;
-
-							h1 {
-								text-transform: uppercase;
-								letter-spacing: 2px;
-								font-weight: 600;
-								text-shadow: -1px -1px 1px #fff;
-							}
+						h1 {
+							text-transform: uppercase;
+							letter-spacing: 2px;
+							font-weight: 600;
+							text-shadow: -1px -1px 1px #fff;
 						}
+					}
 
-						p {
-							margin-bottom: 20px;
-						}
+					p {
+						margin-bottom: 20px;
+					}
 
-						aside {
-							ul {
-								li {
-									p {
-										margin: 0;
-									}
-								}
-								li:first-child {
-									&.tweet_first {
-										width:100%;
-										margin:0;
-									}
-								}
-							}
-						}
-
-						ol {
+					aside {
+						ul {
 							li {
-								float:none;
-								margin:0;
-
-								a {
-									color:#777;
+								p {
+									margin: 0;
 								}
+							}
+							li:first-child {
+								&.tweet_first {
+									width:100%;
+									margin:0;
+								}
+							}
+						}
+					}
+
+					ol {
+						li {
+							float:none;
+							margin:0;
+
+							a {
+								color:#777;
 							}
 						}
 					}
 				}
 			}
-
-			footer {
-				color:#ccc;
-				font-size: 85%;
-				margin: 20px 02.1276596% 0;
-
-				a {
-					color:#ccc;
-				}
-			}	
 		}
+
+		footer {
+			color:#ccc;
+			font-size: 85%;
+			margin: 20px 02.1276596% 0;
+
+			a {
+				color:#999;
+			}
+		}	
 	}	
 }
 
@@ -195,41 +191,38 @@ body {
 			-webkit-transition: all .3s linear;
 			-moz-transition: all .3s linear;
 			transition: all .3s linear;
+			nav {
+				ul {
+					li {
+						float: left;
+						width: 22.8723404%;
+						margin: 0 01.0638298%;
+						-webkit-animation: 2s ease;
+						-moz-animation: 2s ease;
+						-ms-animation: 2s ease;
+						-o-animation: 2s ease;
+						animation: 2s ease;
+						-webkit-transition: all .5s linear;
+						-moz-transition: all .5s linear;
+						transition: all .5s linear;
 
-			article {
-				nav {
-					ul {
-						li {
-							float: left;
-							width: 22.8723404%;
-							margin: 0 01.0638298%;
-							-webkit-animation: 2s ease;
-							-moz-animation: 2s ease;
-							-ms-animation: 2s ease;
-							-o-animation: 2s ease;
-							animation: 2s ease;
-							-webkit-transition: all .5s linear;
-							-moz-transition: all .5s linear;
-							transition: all .5s linear;
-
-							aside {
-								ul {
-									li:first-child {
-										&.tweet_first {
-											width:100%;
-										}
+						aside {
+							ul {
+								li:first-child {
+									&.tweet_first {
+										width:100%;
 									}
 								}
 							}
 						}
-
-						li:first-child {
-							width: 45.7446809%;
-							margin: 0 01.0638298% 0 0;
-						}
 					}
-				}	
-			}
+
+					li:first-child {
+						width: 45.7446809%;
+						margin: 0 01.0638298% 0 0;
+					}
+				}
+			}	
 		}	
 	}
 	
