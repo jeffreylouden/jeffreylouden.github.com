@@ -192,11 +192,11 @@ body section nav ul li header {
   padding: 0;
   border: none;
 }
-body section nav ul li header h1 {
+body section nav ul li header h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
-  text-shadow: -1px -1px 1px #ffffff;
+  text-shadow: 2px 2px 1px white;
 }
 body section nav ul li p {
   margin-bottom: 20px;
