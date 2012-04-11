@@ -1,7 +1,7 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:none;}table{border-collapse:collapse;border-spacing:0;}
 
 .wrap {
-	max-width:940px;
+	max-width:200px;
 	padding: 0 10px;
 	margin: 0 auto;
 	clear: both;
@@ -11,11 +11,11 @@ body {
 	font-family: "proxima-nova-1","proxima-nova-2", helvetica, sans-serif;
 	font-size:14px;
 	line-height:24px;
-	color:#231f20;
-	background: url('../img/bg.jpg');
-	
+	color:#0D3630;
+	background: #fff;
+
 	a {
-		color: #EF3E42;
+		color: #36E3CC;
 		text-decoration:none;
 		-webkit-transition: all .3s linear;
 		-moz-transition: all .3s linear;
@@ -27,7 +27,7 @@ body {
 	}
 	
 	section {
-		margin-top: 0px;
+		margin-top: 50px;
 		-webkit-animation: 2s ease;
 	   	-moz-animation: 2s ease;
 	    -ms-animation: 2s ease;
@@ -38,23 +38,52 @@ body {
 		transition: all .3s linear;
 
 		header {
+			font-family: "kulturista-web-1","kulturista-web-2", helvetica, sans-serif;
 			padding: 10px 0;	
+			text-align:center;
+			width:200px;
+			margin:20px auto 0;
 
-			h1 {
-				text-transform: uppercase;
-				letter-spacing: 2px;
-				font-weight: 600;
-				text-shadow: 2px 2px 1px white;
-
-				i {
-					font-style:normal;
-					color: #EF3E42;	
+			i {
+				display:block;
+				font-size: 16px;
+				line-height:32px;
+				font-style:normal;
+				color: #36E3CC;	
+				position: relative;
+				
+				&:before {
+					content: '';
+					width: 60px;
+					height:25px;
+					position:absolute;
+					top:50%;
+					left:0;
+					display:block;
+					border-top:1px solid #999;
+				}
+				&:after {
+					content: '';
+					width: 60px;
+					height:25px;
+					position:absolute;
+					top:50%;
+					right:0;
+					display:block;
+					border-top:1px solid #999;
 				}
 			}
-		}			
+			
+			h1 {
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size:20px;
+				margin: 10px 0;
+			}
+		}	
+
 		nav {
-			padding: 20px 0;
-			background-color: rgba(250, 250, 250, .33);
+			padding: 0 0 20px;
 
 			ul {
 				overflow: hidden;
@@ -73,15 +102,37 @@ body {
 					transition: all .5s linear;
 					
 					header {
-							margin: 0 0 10px;
+							text-align:center;
+							margin: 0 auto 10px;
 							padding: 0;
 							border:none;
 
 						h2 {
+							position:relative;
 							text-transform: uppercase;
 							letter-spacing: 2px;
 							font-weight: 600;
-							text-shadow: 2px 2px 1px white;
+							&:before {
+								content: '';
+								width: 100px;
+								height:25px;
+								position:absolute;
+								top:50%;
+								left:0;
+								display:block;
+								border-top:1px solid #ccc;
+							}
+							&:after {
+								content: '';
+								width: 100px;
+								height:25px;
+								position:absolute;
+								top:50%;
+								right:0;
+								display:block;
+								border-top:1px solid #ccc;
+							}
+
 						}
 					}
 
@@ -115,27 +166,24 @@ body {
 							}
 						}
 					}
-
-					ol {
-						li {
-							float:none;
-							display: inline;
-							margin:0 5px 0 0;
-
-							a {
-								color:#777;
-							}
-						}
 					}
 				}
 			}
-		}
+			
+			ol {
+				li {
+					margin:5px 0;
+					text-align:center;
+					a {
+						color:#777;
+					}
+				}
+			}
 
 		footer {
 			color:#666;
 			font-size: 85%;
-			text-shadow: 1px 1px 1px white;
-			
+			text-align: center;
 			p {
 				margin: 10px 0;
 
@@ -148,11 +196,11 @@ body {
 	}	
 }
 
-@media all and (min-width:768px) {
+/* @media all and (min-width:768px) {
 
 	body {
 		section {
-			margin-top: 100px;
+			margin-top: 50px;
 			-webkit-animation: 2s ease;
 			-moz-animation: 2s ease;
 			-ms-animation: 2s ease;
@@ -206,7 +254,7 @@ body {
 		}	
 	}
 	
-}
+} */
 
 .oldie {
 	.wrap {
