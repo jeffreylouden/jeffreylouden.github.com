@@ -120,226 +120,242 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.wrap {
-  max-width: 200px;
-  padding: 0 10px;
-  margin: 0 auto;
-  clear: both;
+@-webkit-keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatex(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatex(0);
+  }
+}
+@-moz-keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatex(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatex(0);
+  }
+}
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatex(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatex(0);
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 body {
-  font-family: "proxima-nova-1", "proxima-nova-2", helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  color: #0D3630;
-  background: #fff;
+  font-family: "proxmia-nova-1", "proxmia-nova-2", helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: none;
 }
 body a {
-  color: #36E3CC;
   text-decoration: none;
-  -webkit-transition: all .3s linear;
-  -moz-transition: all .3s linear;
-  transition: all .3s linear;
 }
-body a:hover {
-  color: #bbb;
+body strong {
+  font-weight: bold;
 }
-body section {
-  margin-top: 50px;
-  -webkit-animation: 2s ease;
-  -moz-animation: 2s ease;
-  -ms-animation: 2s ease;
-  -o-animation: 2s ease;
-  animation: 2s ease;
-  -webkit-transition: all .3s linear;
-  -moz-transition: all .3s linear;
-  transition: all .3s linear;
-}
-body section header {
-  font-family: "kulturista-web-1", "kulturista-web-2", helvetica, sans-serif;
-  padding: 10px 0;
-  text-align: center;
-  width: 200px;
-  margin: 20px auto 0;
-}
-body section header i {
-  display: block;
-  font-size: 16px;
-  line-height: 32px;
-  font-style: normal;
-  color: #36E3CC;
-  position: relative;
-}
-body section header i:before {
-  content: '';
-  width: 60px;
-  height: 25px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  display: block;
-  border-top: 1px solid #999;
-}
-body section header i:after {
-  content: '';
-  width: 60px;
-  height: 25px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  display: block;
-  border-top: 1px solid #999;
-}
-body section header h1 {
+body header,
+body footer {
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 20px;
-  margin: 10px 0;
-}
-body section nav {
-  padding: 0 0 20px;
-}
-body section nav ul {
-  overflow: hidden;
-}
-body section nav ul li {
-  float: none;
-  width: 97.8723404%;
-  margin: 0 01.0638298% 40px;
-  -webkit-animation: 2s ease;
-  -moz-animation: 2s ease;
-  -ms-animation: 2s ease;
-  -o-animation: 2s ease;
-  animation: 2s ease;
-  -webkit-transition: all .5s linear;
-  -moz-transition: all .5s linear;
-  transition: all .5s linear;
-}
-body section nav ul li header {
+  line-height: 1.8;
   text-align: center;
+}
+body header {
+  font-size: 11px;
+  height: 0;
+  width: 100%;
+  padding-top: 300px;
+  background: #000000 url('http://assets.jefflouden.com/img/poster.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  animation: fadeIn 2s;
+}
+body header h1,
+body header h2,
+body header h3 {
+  padding: 3px 0;
+}
+body header h1 {
+  color: #222;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  animation: fadeIn 3s;
+}
+body header h2 {
+  color: #444;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  animation: fadeIn 4s;
+}
+body header h3 {
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  animation: fadeIn 5s;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+body header h3:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+body header h3:hover a {
+  color: white;
+}
+body header h3 a {
+  color: #666;
+}
+body #main {
+  width: 80%;
+  margin: 20px 10%;
+}
+body #main p {
+  font-family: "freight-sans-pro-1", "freight-sans-pro-2", sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
   margin: 0 auto 10px;
-  padding: 0;
-  border: none;
+  text-align: justify;
 }
-body section nav ul li header h2 {
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
-}
-body section nav ul li header h2:before {
-  content: '';
-  width: 100px;
-  height: 25px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  display: block;
-  border-top: 1px solid #ccc;
-}
-body section nav ul li header h2:after {
-  content: '';
-  width: 100px;
-  height: 25px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  display: block;
-  border-top: 1px solid #ccc;
-}
-body section nav ul li p {
+body #main ul {
   margin-bottom: 20px;
 }
-body section nav ul li aside ul li p {
-  margin: 0;
-}
-body section nav ul li aside ul li:first-child {
-  margin: 0 01.0638298% 0 0;
-}
-body section nav ul li aside ul li:first-child.tweet_first {
-  width: 100%;
-  margin: 0;
-}
-body section nav ul li aside ul li:first-child.tweet_first p.tweet_time {
-  margin: 5px 0 0;
-  font-size: 85%;
-}
-body section ol li {
-  margin: 5px 0;
+body #main ul li {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 2;
   text-align: center;
 }
-body section ol li a {
-  color: #777;
+body #main ul li a {
+  color: #ff6f8f;
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
 }
-body section footer {
-  color: #666;
-  font-size: 85%;
-  text-align: center;
+body #main ul li a:hover {
+  border-bottom: 1px solid #ff6f8f;
 }
-body section footer p {
-  margin: 10px 0;
+body #main ul li.list-head {
+  font-family: "proxmia-nova-1", "proxmia-nova-2", helvetica, sans-serif;
+  font-size: 11px;
 }
-body section footer p a {
-  color: #999;
+body #main ul li.github iframe {
+  width: 108px;
 }
-/* @media all and (min-width:768px) {
-
-	body {
-		section {
-			margin-top: 50px;
-			-webkit-animation: 2s ease;
-			-moz-animation: 2s ease;
-			-ms-animation: 2s ease;
-			-o-animation: 2s ease;
-			animation: 2s ease;
-			-webkit-transition: all .3s linear;
-			-moz-transition: all .3s linear;
-			transition: all .3s linear;
-			nav {
-				ul {
-					li {
-						float: left;
-						width: 22.8723404%;
-						margin: 0 01.0638298%;
-						-webkit-animation: 2s ease;
-						-moz-animation: 2s ease;
-						-ms-animation: 2s ease;
-						-o-animation: 2s ease;
-						animation: 2s ease;
-						-webkit-transition: all .5s linear;
-						-moz-transition: all .5s linear;
-						transition: all .5s linear;
-
-						aside {
-							ul {
-								li:first-child {
-									&.tweet_first {
-										width:100%;
-									}
-								}
-							}
-						}
-
-						ol {
-							li { 
-								display: block;
-							}
-						}
-					}
-
-					li:first-child {
-						width: 45.7446809%;
-						margin: 0 01.0638298% 0 0;
-					}					
-
-					li:last-child {
-						margin: 0 0 0 01.0638298%;
-					}
-				}
-			}	
-		}	
-	}
-	
-} */
-.oldie .wrap {
-  width: 940px;
+body footer {
+  font-size: 9px;
+  padding: 10px 0;
+  width: 80%;
+  margin: 0 10%;
+  border-top: 1px solid #eee;
+}
+body footer a {
+  color: #ff6f8f;
+}
+@media screen and (min-width: 768px) {
+  body header {
+    padding: 90px 0 0;
+    text-align: right;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    -webkit-transition: height 2s linear;
+    -moz-transition: height 2s linear;
+    transition: height 2s linear;
+  }
+  body header h1,
+  body header h2,
+  body header h3 {
+    margin: 0 90px 0 auto;
+  }
+  body header h1,
+  body header h2 {
+    background: transparent;
+  }
+  body header h1 {
+    -webkit-animation: fadeLeft 3s;
+    -moz-animation: fadeLeft 3s;
+    animation: fadeLeft 3s;
+  }
+  body header h2 {
+    -webkit-animation: fadeLeft 4s;
+    -moz-animation: fadeLeft 4s;
+    animation: fadeLeft 4s;
+  }
+  body header h3 {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 5px black;
+    border-radius: 3px;
+    -webkit-animation: fadeLeft 5s;
+    -moz-animation: fadeLeft 5s;
+    animation: fadeLeft 5s;
+  }
+  body header h3:hover {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid transparent;
+    box-shadow: none;
+  }
+  body header h3 a {
+    color: white;
+  }
+  body header h3 a:hover {
+    color: white;
+  }
+  body #main {
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  body #main article {
+    float: left;
+    width: 70%;
+    margin: 0 5% 0 0;
+  }
+  body #main aside {
+    float: left;
+    width: 25%;
+  }
+  body #main aside ul li {
+    text-align: left;
+  }
+  body footer {
+    margin: 20px auto;
+  }
 }
