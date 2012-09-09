@@ -134,38 +134,45 @@ body {
 	#main {
 		width: 80%;
 		margin: 20px 10%;
-		p {
-			font-family: "freight-sans-pro-1","freight-sans-pro-2",sans-serif;
-			font-size:20px;
-			line-height: 1.6;
-			margin: 0 auto 10px;
-			text-align: justify;
+		article {
+			p {
+				font-family: "freight-sans-pro-1","freight-sans-pro-2",sans-serif;
+				font-size:16px;
+				line-height: 1.6;
+				margin: 0 auto 10px;
+				text-align: justify;
+			}
 		}
-		ul {
-			margin-bottom: 20px;
-			li {
-				font-size: 12px;
-				font-weight: 600;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				line-height:2;
-				text-align: center;
-				a {
-					color: @yellow;
-					padding-bottom: 1px;
-					border-bottom: 1px solid transparent;
-					&:hover {
-						border-bottom: 1px solid @yellow;
+		aside {
+			ul {
+				margin-bottom: 20px;
+				li {
+					font-size: 12px;
+					font-weight: 600;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					line-height:2;
+					text-align: center;
+					a {
+						color: @yellow;
+						padding-bottom: 1px;
+						border-bottom: 1px solid transparent;
+						-webkit-transition: border ease 0.5s;
+					 	-moz-transition: border ease 0.5s;
+						transition: border ease 0.5s;
+						&:hover {
+							border-bottom: 1px solid @yellow;
+						}
 					}
-				}
-				&.list-head {
-					font-family: "proxmia-nova-1", "proxmia-nova-2", helvetica, sans-serif;
-					font-size: 11px;
-					
-				}
-				&.github {
-					iframe {
-						width: 108px;						
+					&.list-head {
+						font-family: "proxmia-nova-1", "proxmia-nova-2", helvetica, sans-serif;
+						font-size: 11px;
+						
+					}
+					&.github {
+						iframe {
+							width: 108px;						
+						}
 					}
 				}
 			}
@@ -188,10 +195,9 @@ body {
 		header {
 			padding:90px 0 0;	
 			text-align: right;
-			box-shadow: 0 0 5px rgba(0,0,0,0.7);
-			-webkit-transition: height 2s linear;
-		 	-moz-transition: height 2s linear;
-			transition: height 2s linear;
+			-webkit-transition: height ease 2s;
+		 	-moz-transition: height ease 2s;
+			transition: height ease 2s;
 			h1,
 			h2,
 			h3 {
@@ -214,11 +220,10 @@ body {
 			h3 {
 				margin-top: 10px;
 				display:inline-block;
-				padding: 8px;	
+				border-radius: 3px;
 				border: 1px solid rgba(0, 0, 0, 0.9);
 				background: rgba(0, 0, 0, 0.8);
 				box-shadow: 0px 0px 5px black;
-				border-radius: 3px;
 				-webkit-animation: fadeLeft 5s;
 				-moz-animation: fadeLeft 5s;
 				animation: fadeLeft 5s;
@@ -228,6 +233,8 @@ body {
 					box-shadow: none;
 				}
 				a {
+					display: block;
+					padding: 8px;
 					color:white;
 					&:hover {
 						color:white;
@@ -242,6 +249,9 @@ body {
 				float: left;
 				width: 70%;
 				margin: 0 5% 0 0;
+				p {
+					font-size: 20px;
+				}
 			}
 			aside {
 				float: left;

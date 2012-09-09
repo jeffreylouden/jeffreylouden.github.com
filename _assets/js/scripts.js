@@ -9,7 +9,7 @@
         if (body.width() > 768) {
             header.css('height', (headerHeight - 90) + 'px');
         } else {
-            header.css('height', '72px');
+            header.css('height', '74px');
         }
     }
         
