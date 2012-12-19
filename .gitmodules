@@ -1,0 +1,3 @@
+[submodule "sagan"]
+	path = sagan
+	url = git://github.com/jeffreylouden/sagan.git
