@@ -1,26 +1,26 @@
 (function( $, win, doc ) {
     "use strict";
     
-    var body            =    $('body'),
-        windowHeight    =    $(win).height(),
+    var
+        HEIGHT          =   'height',
+        PX              =   'px',
+
+        body            =    $('body'),
+        windowHeight    =    $(win).outerHeight(),
         header          =    $('header');
 
     function headerSize( headerHeight ) {
         if (body.width() > 768) {
-            header.css('height', (headerHeight - 90) + 'px');
+            header.css(HEIGHT, (headerHeight - 90) + PX);
         } else {
-            header.css('height', '74px');
+            header.css(HEIGHT, '74' + PX);
         }
     }
-        
-    function init() {
-        headerSize(windowHeight);
-    }
-    
+
     $(win).resize(function () {
         headerSize($(this).outerHeight());
     });
     
-    init();
+    headerSize(windowHeight);
     
 })(jQuery, window, document);
