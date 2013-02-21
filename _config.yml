@@ -1,8 +1,6 @@
 auto:           true
 baseurl:        "/"
 permalink:      "/:categories/:title/"
-paginate:       1000
-pygments:       true
 exclude:        ["README.md", "CNAME"]
 owner-name:     "Jeffrey Louden"
 owner-page:     "http://jefflouden.com/"
@@ -11,6 +9,5 @@ plugins:        "./_plugins"
 topic_list:     ["articles"]
 name:           "jefflouden.com"
 license:        "Creative Commons Attribution-Share Alike 3.0 United States License."
-static_url:     "/static"
 domain:         localhost
 port:           4000

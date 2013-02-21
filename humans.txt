@@ -3,12 +3,11 @@
 
 
 /* TEAM */
-  Developer: Jeffrey Louden
-  Site: http://www.jefflouden.com
-  Twitter: jeffreylouden
-  Location: Chicago, IL
+	Zach Stubenvoll -- Designer -- @zachstubenvoll
+	Jeffrey Louden -- Developer -- @jeffreylouden
+	
 
 /* SITE */
-  Standards: HTML5, CSS3, LESS
+  Standards: HTML5, CSS3, Sass
   Components: Modernizr, jQuery
   Software: SublimeText2, CodeKit
