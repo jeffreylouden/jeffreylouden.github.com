@@ -97,9 +97,10 @@ $medium-padding: 4%;
 }
 
 sup {
-	font-size: 1rem;
+	font-size: 0.8rem;
 	position: relative;
 	top: -0.5rem;
+	padding-left: 0.1rem;
 }
 
 body {
@@ -125,8 +126,8 @@ a {
 
 p {
 	font-family: $freight;
-	font-size: 1.2rem;
-	line-height: 2rem;
+	font-size: 1.25rem;
+	line-height: 2.2rem;
 	margin: 0 auto;
 	padding: $light-padding;
 	&:last-child {
@@ -157,6 +158,10 @@ h3 {
 	font-size: 2.25rem;
 	line-height: 3rem;
 	margin: $medium-padding auto $light-padding;
+	sup {
+		font-size: 1rem;
+		top: -1.2rem;
+	}
 }
 
 blockquote {
@@ -250,7 +255,7 @@ img {
 	list-style: decimal;
 	font-size: 0.8rem;
 	line-height: 1.2rem;
-	border-top: 1px solid $light-gray;
+	border-top: 1px solid $border-gray;
 	margin: 4%;
 	padding: 4%;
 }
@@ -569,8 +574,8 @@ footer {
 	blockquote {
 		padding: 100px $medium-padding $medium-padding;
 		p {
-			font-size: 1.4rem;
-			line-height: 2.2rem;	
+			font-size: 1.8rem;
+			line-height: 2.4rem;	
 		}
 		cite {
 			margin: $light-padding 0 0;
@@ -881,21 +886,29 @@ footer {
 		background: url('../img/load.gif') 50% 50% no-repeat;
 	}
 
-	img {
-	position: relative;
-	display: block;
-	margin: 0 auto;
-	max-width: 95%;
+	img,
+	.vid-contain {
 		&.centered {
-		  position: absolute;
-		  left: 50%;
-		  top: 50%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
 		}
 	}
-	iframe {
-		margin: 100px auto 0;
-		display: block;
+
+	.vid-contain {
+		&.centered {
+			width: 90%;
+			height: auto;
+		}
 	}
+
+	img {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		max-width: 95%;
+	}
+
 	a.close,
 	a.closeModal {
 		font-size: 0.8rem;
@@ -905,15 +918,17 @@ footer {
 		top: 20px;
 		right: 20px;
 		margin: 0 auto;
+		padding: 5px;
+		background: rgba(255,255,255,0.7);
 	}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) { 
 
   	header {
 		h1 {
@@ -926,21 +941,20 @@ only screen and (                min-resolution: 2dppx) {
 	nav {
 		li {
 			&.logo {
-				background: url('../img/nav-logo-bg@2x.png') 50% 0 no-repeat;
+				background-image: url('../img/nav-logo-bg@2x.png');
+				background-size: 61px 71px;
 			}
 		}
 	}
 	.full-width {
-		img {
-			&:after {
-				background-image: url('../img/light-pattern@2x.png');
-				background-size: 1023px 75px;
-			}
+		&:after {
+			background-image: url('../img/light-pattern@2x.png');
+			background-size: 2400px 75px;
 		}
 	}
 	blockquote {
 		background-image: url('../img/dark-pattern@2x.png');
-		background-size: 1023px 75px;
+		background-size: 2400px 75px;
 	}
 
 }
