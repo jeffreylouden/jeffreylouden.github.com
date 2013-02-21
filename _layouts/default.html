@@ -1,0 +1,14 @@
+{% include header.html %}
+	<header>
+		<hgroup>
+    	{% for post in site.posts limit:1 %}
+			<h1>{{ post.title }}</h1>
+			<p>{{ post.intro }}</p>
+    	{% endfor %}
+    	</hgroup>
+	</header>
+
+	<article role="main" id="main">
+		{{ content }}
+	</article>
+{% include footer.html %}

@@ -1,0 +1,10 @@
+---
+layout: archive
+---
+
+	{% for post in site.posts %}
+		<section>
+			<h3><a href="{{ site.static_url }}{{ post.url | slugify }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+			<p>{{ post.intro }}</p>
+		</section>
+	{% endfor %}
