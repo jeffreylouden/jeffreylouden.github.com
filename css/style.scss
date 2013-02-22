@@ -92,6 +92,15 @@ $medium-padding: 4%;
 	overflow: hidden;
 }
 
+
+body {
+	font-family: $proxima;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: none;
+	color: $gray;
+	padding-top: 53px;
+}
+
 .fixed {
 	overflow: hidden;
 }
@@ -103,12 +112,8 @@ sup {
 	padding-left: 0.1rem;
 }
 
-body {
-	font-family: $proxima;
-	text-rendering: optimizeLegibility;
-	-webkit-text-size-adjust: none;
-	color: $gray;
-	padding-top: 57px;
+em {
+	font-style: italic;
 }
 
 a {
@@ -285,7 +290,7 @@ header {
 nav {
 	background: $light-gray;
 	text-align: center;
-	padding: 20px 0;
+	padding: 18px 0;
 	position: fixed;
 	z-index: 999;
 	top: 0;
@@ -315,11 +320,23 @@ nav {
 			min-width: 61px;
 			height: 71px;
 			margin: -20px 0 -61px;
+			padding: 0;
 			position: relative;
-			top: -22px;
+			top: -13px;
 			background: url('../img/nav-logo-bg.png') 50% 0 no-repeat;
 			a {
+				position: relative;
+				background: url('../img/jeff-face.png') 50% 50% no-repeat;
+				background-size: contain;
+				margin: 8px auto;
+				width: 38px;
+				height:48px;
 				@extend %ir;
+			}
+			&:hover {
+				a {
+
+				}
 			}
 		}
 	}
@@ -414,9 +431,16 @@ footer {
 	h2 {
 		text-align: center;
 	}
+	h1 {
+		background: url('../img/jeff-logo-white.png') 50% 50% no-repeat;
+		max-width: 435px;
+		width: 100%;
+		height: 40px;
+		background-size: 100% auto;
+		@extend %ir;
+	}
 	h2 {
-		margin: 1% 0 $medium-padding;
-		line-height: 1.2rem;
+		line-height: 1.4rem;
 	}
 	figure {
 		overflow: hidden;
@@ -425,7 +449,7 @@ footer {
 		padding: 8% $medium-padding;
 		figcaption {
 			p {
-				padding: 0;
+				padding: $medium-padding 0 0;
 			}
 		}
 		i {
@@ -943,6 +967,10 @@ only screen and (min-resolution: 2dppx) {
 			&.logo {
 				background-image: url('../img/nav-logo-bg@2x.png');
 				background-size: 61px 71px;
+				a {
+					background-image: url('../img/jeff-face@2x.png');
+					background-size: 38px 48px;
+				}
 			}
 		}
 	}
@@ -956,5 +984,9 @@ only screen and (min-resolution: 2dppx) {
 		background-image: url('../img/dark-pattern@2x.png');
 		background-size: 2400px 75px;
 	}
-
+	.info {
+		h1 {
+			background-image: url('../img/jeff-logo-white@2x.png');			
+		}
+	}
 }
