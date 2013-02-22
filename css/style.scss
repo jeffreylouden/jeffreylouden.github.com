@@ -163,6 +163,7 @@ h3 {
 	font-size: 2.25rem;
 	line-height: 3rem;
 	margin: $medium-padding auto $light-padding;
+	padding: 0 $light-padding;
 	sup {
 		font-size: 1rem;
 		top: -1.2rem;
@@ -176,7 +177,7 @@ blockquote {
 	color: white;
 	p {
 		margin: 0 auto;
-		font-size: 1rem;
+		font-size: 1.4rem;
 		line-height: 2rem;
 		text-align: center;
 	}
@@ -258,6 +259,7 @@ img {
 
 .footnotes {
 	list-style: decimal;
+	list-style-position: inside;
 	font-size: 0.8rem;
 	line-height: 1.2rem;
 	border-top: 1px solid $border-gray;
@@ -271,8 +273,8 @@ header {
 	h1 {
 		text-align: center;
 		position: relative;
-		padding-bottom: (2 * $medium-padding);
-		margin: $light-padding 0 $medium-padding;
+		padding-bottom: (4 * $medium-padding);
+		margin: $medium-padding 0 (2 * $medium-padding);
 		&:after {
 			content: '';
 			position: absolute;
@@ -343,7 +345,6 @@ nav {
 }
 
 #main {
-	background: $light-gray;
 	overflow: hidden;
 
 	section {
@@ -351,6 +352,10 @@ nav {
 		padding: $medium-padding;
 		background: white;
 		clear: both;
+
+		h3 {
+			text-transform: capitalize;
+		}
 	}
 
 	ul {
@@ -377,6 +382,7 @@ footer {
 	font-size: 0.7rem;
 	font-weight: 600;
 	text-transform: uppercase;
+	border-top: 1px solid $border-gray;
 	p {
 		text-align: center;
 		line-height: 1rem;
@@ -393,7 +399,7 @@ footer {
 		padding-bottom: 0;
 	}
 	#main {
-		background: white;
+		background: $light-gray;
 
 		section {
 			padding: $light-padding;
@@ -437,10 +443,14 @@ footer {
 		width: 100%;
 		height: 40px;
 		background-size: 100% auto;
+		margin: $medium-padding 0;
 		@extend %ir;
 	}
 	h2 {
 		line-height: 1.4rem;
+	}
+	h3 {
+		padding: 0;
 	}
 	figure {
 		overflow: hidden;
@@ -503,8 +513,8 @@ footer {
 		}
 		h3 {
 			margin-bottom: $medium-padding;
-			font-size: 1.6rem;
-			line-height: 2rem;
+			font-size: 2.25rem;
+			line-height: 3rem;
 		}
 		h4 {
 			font-family: $freight;
@@ -520,26 +530,38 @@ footer {
 	}
 }
 
+#colophon {
+	overflow: hidden;
+}
+
 #contact,
 #thanks {
 	margin: $medium-padding;
+	overflow: hidden;
 	p {
 		font-size: 1rem;
 	}
 }
 
 #contact {
+	li {
+		width: 50%;
+		box-sizing: border-box;
+		float: left;
+	}
 	a {
 		font-size: 0.8rem;
 		font-weight: 600;
 		text-transform: uppercase;
+		line-height: 1.2rem;
+		vertical-align: bottom;
 	}
 	i {
 		font-size: 1rem;
 		line-height: 1.7rem;
 		font-weight: 300;
 		color: $gray;
-		margin-right: $light-padding;
+		margin-right: 10px;
 		position: relative;
 		top: 3px;
 	}
@@ -585,7 +607,7 @@ footer {
 			color: white;
 			text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
 			background: rgba(0,0,0,0.4);
-			padding: 5px;
+			padding: 10px;
 			a {
 				color: white;
 				&:hover {
@@ -608,6 +630,10 @@ footer {
 
 	header {
 		margin: $light-padding;
+		h1 {
+			padding-bottom: (2 * $medium-padding);
+			margin: $light-padding 0 $medium-padding;
+		}
 		p {
 			text-align: left;
 			max-width: 60%;
@@ -617,6 +643,7 @@ footer {
 	}
 
 	#main {
+		background: $light-gray;
 		section {
 			position: relative;
 		}
@@ -676,14 +703,16 @@ footer {
 	}
 
 	#contact {
-		width: 30%;
+		width: 35%;
 		padding-left: 8%;
 		li {
+			float: none;
+			width: 100%;
 			margin-bottom: $light-padding;
 		}
 	}
 	#thanks {
-		width: 70%;
+		width: 65%;
 	}
 
 	#legal {
@@ -698,9 +727,6 @@ footer {
 			margin-top: $medium-padding;
 		}
 		article {
-			h3 {
-				font-size: 2.3rem;
-			}
 			h4 {
 				margin-bottom: $medium-padding;
 			}
@@ -800,7 +826,6 @@ footer {
 
 			h3 {
 				margin: 0 0 1.3rem 0;
-				font-size: 2.6rem;
 				line-height: 1.7rem;
 			}
 
@@ -808,7 +833,7 @@ footer {
 				float: left;
 				width: 50%;
 				box-sizing: border-box;
-				margin: 0 0 $light-padding;
+				margin: 0 0 $medium-padding;
 				&:nth-child(1n+1) {
 					padding-right: $medium-padding;
 				}
@@ -823,6 +848,7 @@ footer {
 		}
 		h1 {
 			font-size: 4rem;
+			margin: 0;
 		}
 		figure {
 			background: url('../img/me-left-blue.jpg') 50% 30% no-repeat;
@@ -847,7 +873,7 @@ footer {
 				text-transform: uppercase;
 				letter-spacing: 0.1em;
 				background: rgba(0,0,0,0.4);
-				padding: 5px;
+				padding: 10px;
 				a {
 					color: white;
 				}
