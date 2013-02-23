@@ -609,7 +609,7 @@ footer {
 	h3,
 	.vid-contain,
 	.footnotes {
-		max-width: 60%;
+		max-width: 70%;
 	}
 
 	.footnotes {
@@ -669,7 +669,7 @@ footer {
 		}
 		p {
 			text-align: left;
-			max-width: 60%;
+			max-width: 70%;
 			display: block;
 			margin: 0 auto 1em;
 		}
@@ -694,7 +694,7 @@ footer {
 		}
 
 		ul {
-			max-width: 60%;
+			max-width: 70%;
 			margin: 2% auto;
 			overflow: hidden;
 			&.floated {
@@ -721,7 +721,7 @@ footer {
 	}
 
 	#colophon {
-		max-width: 60%;
+		max-width: 70%;
 		margin: $medium-padding auto;
 		overflow: hidden;
 	}
@@ -1056,3 +1056,5 @@ only screen and (min-resolution: 2dppx) {
 		}
 	}
 }
+
+@import 'print';
