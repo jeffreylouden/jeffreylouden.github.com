@@ -4,7 +4,13 @@ layout: archive
 
 	{% for post in site.posts %}
 		<section>
-			<h3><a href="{{ site.static_url }}{{ post.url | slugify }}" title="{{ post.title }}">{{ post.title }}</a></h3>
-			<p>{{ post.intro }}</p>
+			<h3><a href="{{ site.url }}{{ post.url | slugify }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+			{% if post.preview %}
+				<a href="{{ site.url }}{{ post.url | slugify }}" title="{{ post.title }}">
+					<img src="../img/{{ post.preview }}" alt="{{ post.title }}" class="preview" />
+				</a>
+			{% else %}
+				<p>{{ post.intro }}</p>
+			{% endif %}
 		</section>
 	{% endfor %}

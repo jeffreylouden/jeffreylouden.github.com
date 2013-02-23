@@ -1,5 +1,5 @@
 auto:           true
-baseurl:        "/"
+url:        	""
 permalink:      "/:categories/:title/"
 exclude:        ["README.md", "CNAME"]
 owner-name:     "Jeffrey Louden"
