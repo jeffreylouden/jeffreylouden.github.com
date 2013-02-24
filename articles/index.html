@@ -1,13 +1,14 @@
 ---
 layout: archive
+title: Articles
 ---
 
 	{% for post in site.posts %}
 		<section>
 			<h3><a href="{{ site.url }}{{ post.url | slugify }}" title="{{ post.title }}">{{ post.title }}</a></h3>
 			{% if post.preview %}
-				<a href="{{ site.url }}{{ post.url | slugify }}" title="{{ post.title }}">
-					<img src="../img/{{ post.preview }}" alt="{{ post.title }}" class="preview" />
+				<a href="{{ site.url }}{{ post.url | slugify }}" title="{{ post.title }}" class="preview">
+					<img src="../img/posts/{{ post.preview }}" alt="{{ post.title }}" class="preview" />
 				</a>
 			{% else %}
 				<p>{{ post.intro }}</p>
