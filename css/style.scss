@@ -146,8 +146,8 @@ a {
 
 p {
 	font-family: $freight;
-	font-size: 1.25rem;
-	line-height: 2.2rem;
+	font-size: 1rem;
+	line-height: 1.8rem;
 	margin: 0 auto;
 	padding: $light-padding;
 	&:last-child {
@@ -175,8 +175,8 @@ h2 {
 }
 h3 {
 	font-family: $freight;
-	font-size: 2.25rem;
-	line-height: 3rem;
+	font-size: 1.8rem;
+	line-height: 2.6rem;
 	margin: $medium-padding auto $light-padding;
 	padding: 0 $light-padding;
 	sup {
@@ -269,7 +269,7 @@ img {
 		max-width: 2400px;
 		margin-bottom: 0;
 		& + i {
-			bottom: 120px;
+			bottom: 100px;
 		}
 	}
 	&:after {
@@ -383,7 +383,7 @@ nav {
 	overflow: hidden;
 
 	section {
-		margin: $light-padding;
+		margin: $light-padding 0;
 		padding: $light-padding $medium-padding;
 		background: white;
 		clear: both;
@@ -398,7 +398,7 @@ nav {
 			clear: both;
 			background: white;
 			margin: $light-padding;
-			padding: $medium-padding;
+			padding: (2 * $medium-padding) $medium-padding;
 			max-width: 100%;
 		}
 		li {
@@ -532,7 +532,6 @@ footer {
 }
 
 #education {
-	border-top: 1px solid $border-gray;
 	li {
 		&:last-child {
 			h4 {
@@ -577,8 +576,6 @@ footer {
 		}
 		h3 {
 			margin-bottom: $medium-padding;
-			font-size: 2.25rem;
-			line-height: 3rem;
 		}
 		h4 {
 			font-family: $freight;
@@ -640,6 +637,11 @@ footer {
 		font-size: 3rem;
 	}
 
+	p {
+		font-size: 1.25rem;
+		line-height: 2.2rem;
+	}
+
 	p,
 	h3,
 	.vid-contain,
@@ -666,8 +668,8 @@ footer {
 		& + i {
 			display: block;
 			position: absolute;
-			bottom: $medium-padding;
-			right: $light-padding;
+			bottom: 0;
+			right: 0;
 			font-family: $freight;
 			font-size: 0.8rem;
 			text-transform: uppercase;
@@ -717,6 +719,8 @@ footer {
 		}
 
 		h3 {
+			font-size: 2.25rem;
+			line-height: 3rem;
 			&:before {
 				content: ' ';
 				position: absolute;
@@ -751,6 +755,9 @@ footer {
 					white-space: nowrap;
 					text-overflow: ellipsis;
 				}
+			}
+			.info & {
+				padding: $medium-padding;
 			}
 		}
 	}
@@ -791,17 +798,6 @@ footer {
 		margin: 1% 0 0;
 		padding: 0;
 		text-align: center;
-	}
-
-	#experience {
-		li {
-			margin-top: $medium-padding;
-		}
-		article {
-			h4 {
-				margin-bottom: $medium-padding;
-			}
-		}
 	}
 	
 	#education {
@@ -880,7 +876,7 @@ footer {
 						bottom: -50%;
 						height: 2px;
 						width: 40px;
-						background: black;
+						background: $gray;
 					}
 				}
 			}
@@ -939,8 +935,8 @@ footer {
 			i {
 				display: block;
 				position: absolute;
-				bottom: $medium-padding;
-				right: $light-padding;
+				bottom: 0;
+				right: 0;
 				font-family: $freight;
 				font-size: 0.8rem;
 				text-transform: uppercase;
