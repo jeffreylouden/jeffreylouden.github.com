@@ -7,6 +7,7 @@
         FIXED               =   'fixed',
         HIDE                =   'hide',
         HREF                =   'href',
+        ID                  =   'id',
         IMAGE               =   'image',
         IMG                 =   'img',
         PIXEL               =   'px',
