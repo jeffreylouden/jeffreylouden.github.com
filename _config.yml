@@ -1,6 +1,6 @@
 auto:           true
 url:        	"http://jefflouden.com/"
-permalink:      "/:categories/:title/"
+permalink:      ":title/"
 exclude:        ["README.md", "CNAME"]
 owner-name:     "Jeffrey Louden"
 owner-page:     "http://jefflouden.com/"
