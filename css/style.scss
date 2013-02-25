@@ -1113,25 +1113,20 @@ footer {
             transition: all ease 1s;
 
     b {
-        display: none;
         -webkit-animation: partyMode 1.5s infinite alternate;
         -moz-animation: partyMode 1.5s infinite alternate;
         animation: partyMode 1.5s infinite alternate;
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index: 1001;
     }
 
     &.show {
         top: 0;
         opacity: 1;
-
-        b {
-            display: block;
-            position: absolute;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
-            z-index: 1001;
-        }
     }
 
 }
