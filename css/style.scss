@@ -1,17 +1,67 @@
 @import 'reset';
 @import 'font-awesome';
 
-@-webkit-keyframes spin {
-	0% { -webkit-transform: rotate(0deg); }
-	100% { -webkit-transform: rotate(359deg); }
+@-webkit-keyframes partyMode {
+    0% { 
+        background-color: rgba(255,0,0,0.6); 
+    }
+    20% { 
+        background-color: rgba(0,255,108,0.6); 
+    }
+    40% { 
+        background-color: rgba(240,255,0,0.6); 
+    }
+    60% { 
+        background-color: rgba(156,0,255,0.6); 
+    }
+    80% { 
+        background-color: rgba(0,240,255,0.6); 
+    }
+    100% { 
+        background-color: rgba(255,198,0,0.6); 
+    }
 }
-@-moz-keyframes spin {
-	0% { -moz-transform: rotate(0deg); }
-	100% { -moz-transform: rotate(359deg); }
+
+@-moz-keyframes partyMode {
+    0% { 
+        background-color: rgba(255,0,0,0.6); 
+    }
+    20% { 
+        background-color: rgba(0,255,108,0.6); 
+    }
+    40% { 
+        background-color: rgba(240,255,0,0.6); 
+    }
+    60% { 
+        background-color: rgba(156,0,255,0.6); 
+    }
+    80% { 
+        background-color: rgba(0,240,255,0.6); 
+    }
+    100% { 
+        background-color: rgba(255,198,0,0.6); 
+    }
 }
-@keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(359deg); }
+
+@keyframes partyMode {
+    0% { 
+        background-color: rgba(255,0,0,0.6); 
+    }
+    20% { 
+        background-color: rgba(0,255,108,0.6); 
+    }
+    40% { 
+        background-color: rgba(240,255,0,0.6); 
+    }
+    60% { 
+        background-color: rgba(156,0,255,0.6); 
+    }
+    80% { 
+        background-color: rgba(0,240,255,0.6); 
+    }
+    100% { 
+        background-color: rgba(255,198,0,0.6); 
+    }
 }
 
 @-webkit-keyframes modalIn {
@@ -202,6 +252,7 @@ blockquote {
 		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: .075em;
+		font-size: 0.9rem;
 		font-weight: 600;
 		display: block;
 		margin: $light-padding 0;
@@ -693,6 +744,7 @@ footer {
 			line-height: 2.4rem;	
 		}
 		cite {
+			font-size: 1rem;
 			margin: $light-padding 0 0;
 		}
 	}
@@ -720,7 +772,7 @@ footer {
 
 		h3 {
 			font-size: 2.25rem;
-			line-height: 3rem;
+			line-height: 1.7rem;
 			&:before {
 				content: ' ';
 				position: absolute;
@@ -1043,6 +1095,45 @@ footer {
 		padding: 5px;
 		background: rgba(255,255,255,0.7);
 	}
+}
+
+#party-mode {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top:100%;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 1000;
+    opacity: 0;
+    background: white url('../img/party.gif') 50% 50% no-repeat;
+    -webkit-transition: all ease 1s;
+       -moz-transition: all ease 1s;
+            transition: all ease 1s;
+
+    b {
+        display: none;
+        -webkit-animation: partyMode 1.5s infinite alternate;
+        -moz-animation: partyMode 1.5s infinite alternate;
+        animation: partyMode 1.5s infinite alternate;
+    }
+
+    &.show {
+        top: 0;
+        opacity: 1;
+
+        b {
+            display: block;
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            z-index: 1001;
+        }
+    }
+
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),

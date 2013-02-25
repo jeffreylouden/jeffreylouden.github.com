@@ -31,12 +31,13 @@
         footer              =   $('footer'),
         credits             =   footer.find('#credits'),
         partyMode           =   credits.find('i'),
+		partyOverlay        =   $('#party-mode'),
+        
         modalLink           =   $('.modal'),
-		modal,
+        modal,
         modalContent,
         modalContainer,
-		modalContentType,
-		partyOverlay;
+        modalContentType;
 
 	function createModal(url) {
         body.append('<div id="modal"><a class="close" href="#" title="Close">Close</a></div>');
@@ -139,6 +140,16 @@
     modalLink.on('click', function(e) {
         e.preventDefault();
         createModal($(this).attr(HREF));
+    });
+
+    partyMode.click(function() {
+        htmlbody.addClass(FIXED);
+        partyOverlay.addClass(SHOW);
+
+        partyOverlay.on('click', function() {
+            $(this).removeClass(SHOW);
+            htmlbody.removeClass(FIXED);
+        });
     });
 
     $(doc.documentElement).keyup(function (event) {
