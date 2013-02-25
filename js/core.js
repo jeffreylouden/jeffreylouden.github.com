@@ -3,6 +3,7 @@
 
 	var
 		// CONSTANT Declarations
+        ANIMATE             =   'animate',
         CENTERED            =   'centered',
         FIXED               =   'fixed',
         HIDE                =   'hide',
@@ -145,7 +146,7 @@
 
     partyMode.click(function() {
         htmlbody.addClass(FIXED);
-        partyOverlay.addClass(SHOW);
+        partyOverlay.addClass(ANIMATE).addClass(SHOW);
 
         partyOverlay.on('click', function() {
             $(this).removeClass(SHOW);
