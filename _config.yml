@@ -7,7 +7,7 @@ owner-page:     "http://jefflouden.com/"
 owner-email:    "jeff@jefflouden.com"
 plugins:        "./_plugins"
 topic_list:     ["articles"]
-name:           "jefflouden.com"
+name:           "Jeffrey Louden"
 license:        "Creative Commons Attribution-Share Alike 3.0 United States License."
 domain:         localhost
 port:           4000
