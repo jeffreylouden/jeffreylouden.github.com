@@ -1214,7 +1214,7 @@ only screen and (min-resolution: 2dppx) and (min-width: 40em) {
 			&.logo {
 				a {
 					background-image: url('../img/jeff-face-sprite@2x.png');  // Because the use case is fot only Retina macs, the extra request is worth not including the base64 encoded image
-					background-size: 61px 71px;
+					background-size: auto 100%;
 				}
 				&:hover {
 					a {
