@@ -140,17 +140,17 @@
 
 @-webkit-keyframes play-retina {
    from { background-position:    0px; }
-     to { background-position: -1037px; }
+     to { background-position: -1294px; }
 }
 
 @-moz-keyframes play-retina {
    from { background-position:    0px; }
-     to { background-position: -1037px; }
+     to { background-position: -1294px; }
 }
 
 @keyframes play-retina {
    from { background-position:    0px; }
-     to { background-position: -1037px; }
+     to { background-position: -1294px; }
 }
 
 $proxima: "proxima-nova-1","proxima-nova-2",helvetica,sans-serif;
@@ -1214,7 +1214,7 @@ only screen and (min-resolution: 2dppx) and (min-width: 40em) {
 			&.logo {
 				a {
 					background-image: url('../img/jeff-face-sprite@2x.png');  // Because the use case is fot only Retina macs, the extra request is worth not including the base64 encoded image
-					background-size: auto 61px;
+					background-size: auto 76.117647059px;
 				}
 				&:hover {
 					a {
