@@ -1218,9 +1218,9 @@ only screen and (min-resolution: 2dppx) and (min-width: 40em) {
 				}
 				&:hover {
 					a {
-                    -webkit-animation: play 1.7s steps(17);
-				       -moz-animation: play 1.7s steps(17);
-				            animation: play 1.7s steps(17);
+                    -webkit-animation: play-retina 1.7s steps(17);
+				       -moz-animation: play-retina 1.7s steps(17);
+				            animation: play-retina 1.7s steps(17);
 					}
 				}
 			}
