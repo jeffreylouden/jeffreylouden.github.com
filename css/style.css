@@ -1922,9 +1922,9 @@ footer {
     background-image: url("../img/jeff-face-sprite@2x.png");
     background-size: auto 100%; }
   nav li.logo:hover a {
-    -webkit-animation: play-retina 1.7s steps(17);
-    -moz-animation: play-retina 1.7s steps(17);
-    animation: play-retina 1.7s steps(17); } }
+    -webkit-animation: play 1.7s steps(17);
+    -moz-animation: play 1.7s steps(17);
+    animation: play 1.7s steps(17); } }
 @media print {
   body,
   header {
