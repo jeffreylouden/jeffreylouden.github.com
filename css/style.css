@@ -1917,14 +1917,6 @@ footer {
 
   .info h1 {
     background-image: url("../img/jeff-logo-white@2x.png"); } }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 40em), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 40em), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 40em), only screen and (min-device-pixel-ratio: 2) and (min-width: 40em), only screen and (min-resolution: 192dpi) and (min-width: 40em), only screen and (min-resolution: 2dppx) and (min-width: 40em) {
-  nav li.logo a {
-    background-image: url("../img/jeff-face-sprite@2x.png");
-    background-size: auto 61px; }
-  nav li.logo:hover a {
-    -webkit-animation: play-retina 1.7s steps(17);
-    -moz-animation: play-retina 1.7s steps(17);
-    animation: play-retina 1.7s steps(17); } }
 @media print {
   body,
   header {

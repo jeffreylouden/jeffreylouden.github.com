@@ -1203,29 +1203,29 @@ only screen and (min-resolution: 2dppx) {
 	}
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 40em),
-only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 40em),
-only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 40em),
-only screen and (min-device-pixel-ratio: 2) and (min-width: 40em),
-only screen and (min-resolution: 192dpi) and (min-width: 40em),
-only screen and (min-resolution: 2dppx) and (min-width: 40em) {
-	nav {
-		li {
-			&.logo {
-				a {
-					background-image: url('../img/jeff-face-sprite@2x.png');  // Because the use case is for only Retina macs, the extra request is worth not including the base64 encoded image
-					background-size: auto 61px;
-				}
-				&:hover {
-					a {
-                    -webkit-animation: play-retina 1.7s steps(17);
-				       -moz-animation: play-retina 1.7s steps(17);
-				            animation: play-retina 1.7s steps(17);
-					}
-				}
-			}
-		}
-	}
-}
+// @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 40em),
+// only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 40em),
+// only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 40em),
+// only screen and (min-device-pixel-ratio: 2) and (min-width: 40em),
+// only screen and (min-resolution: 192dpi) and (min-width: 40em),
+// only screen and (min-resolution: 2dppx) and (min-width: 40em) {
+// 	nav {
+// 		li {
+// 			&.logo {
+// 				a {
+// 					background-image: url('../img/jeff-face-sprite@2x.png');  // Because the use case is for only Retina macs, the extra request is worth not including the base64 encoded image
+// 					background-size: auto 61px;
+// 				}
+// 				&:hover {
+// 					a {
+//                     -webkit-animation: play-retina 1.7s steps(17);
+// 				       -moz-animation: play-retina 1.7s steps(17);
+// 				            animation: play-retina 1.7s steps(17);
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 @import 'print';
