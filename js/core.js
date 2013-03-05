@@ -166,4 +166,8 @@
         }
     });
 
+    if (window.location.href.indexOf('party-mode') > -1) {
+        partyMode.click();
+    }
+
 })(jQuery, window, document);
