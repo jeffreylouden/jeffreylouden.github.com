@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'font-awesome';
+@import 'syntax';
 
 @-webkit-keyframes partyMode {
     0% { 
@@ -695,6 +696,29 @@ footer {
 		margin-right: 10px;
 		position: relative;
 		top: 3px;
+	}
+}
+
+pre {
+	background: $gray;
+	margin: $medium-padding -7%;
+	padding: $medium-padding;
+	font-family: Menlo,Monaco,monospace;
+	position: relative;
+	-moz-tab-size: 2;
+	tab-size: 2;
+	word-break: normal;
+	-moz-hyphens: none;
+	hyphens: none;
+	font-size: 0.8rem;
+	line-height: 1.4rem;
+	code {
+		max-width: 70%;
+		margin: 0 auto;
+		overflow: auto;
+		background: none;
+		white-space: pre;
+		display: block;		
 	}
 }
 
