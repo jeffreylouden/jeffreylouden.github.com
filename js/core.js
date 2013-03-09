@@ -34,7 +34,7 @@
         credits             =   footer.find('#credits'),
         partyMode           =   credits.find('i'),
 		partyOverlay        =   $('#party-mode'),
-        
+
         modalLink           =   $('.modal'),
         modal,
         modalContent,
@@ -58,7 +58,7 @@
             modalContent.click(function(e){
                 e.stopPropagation();
             });
-            
+
         } else {
 
             var img = new win.Image();
@@ -68,7 +68,7 @@
 
                 modalContent = modal.find(IMG);
                 modalContentType = IMAGE;
-                
+
                 repositionModalContent();
 
                 modalContent.click(function(e){
@@ -80,15 +80,13 @@
             img.src = url;
         }
 
-        
-
         modal.addClass(SHOW);
         htmlbody.addClass(FIXED);
 
         modal.find('.close').click(function(e) {
             e.preventDefault();
         });
-        
+
         modal.click(function() {
             dismissModal();
         });
@@ -116,7 +114,7 @@
             });
         }
     }
-    
+
     function dismissModal() {
         if (modal.length > 0) {
 
@@ -126,7 +124,7 @@
             setTimeout(function() {
                 modal.remove();
             }, 200);
-            
+
             wndw.off('resize', repositionModalContent);
         }
     }
