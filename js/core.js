@@ -39,94 +39,68 @@
         modal,
         modalContent,
         modalContainer,
-        modalContentType;
+        modalContentType,
 
-	function createModal(url) {
-        body.append('<div id="modal"><a class="close" href="#" title="Close">Close</a></div>');
-        modal = $('#modal');
+        Modal = {
+            create: function(url) {
+                if (url.indexOf('youtube') > -1) {
 
-        if (url.indexOf('youtube') > -1) {
+                    var id = url.split('?v=')[1];
+                    modal.prepend('<div class="vid-contain"><div class="vid">' + iframeString.replace(idReplacer, id) + '</div></div>');
 
-            var id = url.split('?v=')[1];
-            modal.prepend('<div class="vid-contain"><div class="vid">' + iframeString.replace(idReplacer, id) + '</div></div>');
+                    modalContentType = VIDEO;
+                    modalContent = modal.find('iframe');
 
-            modalContentType = VIDEO;
-            modalContent = modal.find('iframe');
+                    modalContent.click(function(e){
+                        e.stopPropagation();
+                    });
 
-            repositionModalContent();
+                } else {
 
-            modalContent.click(function(e){
-                e.stopPropagation();
-            });
+                    var img = new win.Image();
 
-        } else {
+                    img.onload = function() {
+                        modal.prepend(img);
 
-            var img = new win.Image();
+                        modalContent = modal.find(IMG);
+                        modalContentType = IMAGE;
 
-            img.onload = function() {
-                modal.prepend(img);
+                        modalContent.click(function(e){
+                            e.stopPropagation();
+                        });
 
-                modalContent = modal.find(IMG);
-                modalContentType = IMAGE;
+                    };
 
-                repositionModalContent();
+                    img.src = url;
+                }
 
-                modalContent.click(function(e){
-                    e.stopPropagation();
+                modal.removeClass(HIDE).addClass(SHOW);
+                htmlbody.addClass(FIXED);
+
+                modal.find('.close').click(function(e) {
+                    e.preventDefault();
                 });
 
-            };
+                modal.click(function() {
+                    Modal.dismiss();
+                });
+            },
+            dismiss: function() {
+                if (modal.length > 0) {
 
-            img.src = url;
-        }
+                    htmlbody.removeClass(FIXED);
+                    modal.removeClass(SHOW).addClass(HIDE);
 
-        modal.addClass(SHOW);
-        htmlbody.addClass(FIXED);
+                    setTimeout(function() {
+                        modalContent.remove();
+                    }, 200);
+                }
+            }
+        };
 
-        modal.find('.close').click(function(e) {
-            e.preventDefault();
-        });
-
-        modal.click(function() {
-            dismissModal();
-        });
-    }
-
-    function repositionModalContent() {
-
-        if (!modalContent) {
-            modalContent = (modalContentType === VIDEO) ? modal.find('iframe') : modal.find(IMG);
-        }
-
-        modalContainer = (modalContentType === VIDEO) ? modalContent.closest('.vid-contain') : modal.find(IMG);
-
-        if (modalContent.innerHeight() < wndw.height()) {
-            modalContainer.addClass(CENTERED);
-            modalContainer.css({
-                marginTop : '-' + Math.floor(modalContent.innerHeight() / 2) + PIXEL,
-                marginLeft : '-' + Math.floor(modalContent.outerWidth() / 2) + PIXEL
-            });
-        } else {
-            modalContainer.removeClass(CENTERED);
-            modalContainer.css({
-                marginTop : '0px',
-                marginLeft : 'auto'
-            });
-        }
-    }
-
-    function dismissModal() {
-        if (modal.length > 0) {
-
-            htmlbody.removeClass(FIXED);
-            modal.removeClass(SHOW).addClass(HIDE);
-
-            setTimeout(function() {
-                modal.remove();
-            }, 200);
-
-            wndw.off('resize', repositionModalContent);
-        }
+    if ( modalLink.length ) {
+        body.append('<div id="modal"><a class="close" href="#" title="Close">Close</a></div>');
+        modal = $('#modal');
     }
 
     footnote.on('click', function(e) {
@@ -139,7 +113,7 @@
 
     modalLink.on('click', function(e) {
         e.preventDefault();
-        createModal($(this).attr(HREF));
+        Modal.create($(this).attr(HREF));
     });
 
     partyMode.click(function() {
@@ -154,13 +128,7 @@
 
     $(doc.documentElement).keyup(function (event) {
         if (event.keyCode === 27) {
-            dismissModal();
-        }
-    });
-
-    wndw.resize(function() {
-        if (modalContent) {
-            repositionModalContent();
+            Modal.dismiss();
         }
     });
 
