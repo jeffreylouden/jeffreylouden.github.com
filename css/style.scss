@@ -176,6 +176,7 @@ $medium-padding: 4%;
 
 body {
 	font-family: $proxima;
+	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	-webkit-text-size-adjust: none;
 	color: $gray;
