@@ -5,7 +5,7 @@
 <head>
   {% capture relative_path %}{{ page.url | slugify | remove:'index.html' | remove:'.html' | replace:'404','' | replace:'/','' }}{% endcapture %}
   {% capture relative_title %}{{ page.title | capitalize | remove:'index.html' | remove:'.html' | replace:'404' | replace:'/','' | prepend:' | ' }}{% endcapture %}
-  <meta charset="utf-8">
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>{{ site.name }}{% if relative_title != ' | ' %}{{ relative_title }}{% endif %}</title>
