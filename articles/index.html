@@ -2,12 +2,12 @@
 layout: archive
 title: Articles
 ---
-
+	{% capture relative_path %}{{ page.url | slugify | remove:'index.html' | remove:'.html' | replace:'404','' | replace:'/','' }}{% endcapture %}
 	{% for post in site.posts %}
 		<section>
-			<h3><a href="{{ site.url }}{{ post.url | slugify }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+			<h3><a href="{{ site.url }}{{ relative_path }}" title="{{ post.title }}">{{ post.title }}</a></h3>
 			{% if post.preview %}
-				<a href="{{ site.url }}{{ post.url | slugify }}" title="{{ post.title }}" class="preview">
+				<a href="{{ site.url }}{{ relative_path }}" title="{{ post.title }}" class="preview">
 					<img src="../img/posts/{{ post.preview }}" alt="{{ post.title }}" class="preview" />
 				</a>
 			{% else %}
