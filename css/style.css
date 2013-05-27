@@ -29,8 +29,8 @@ table {
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../font/fontawesome-webfont.eot?v=3.0.1");
-  src: url("../font/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../font/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../font/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
+  src: url("../font/fontawesome-webfont.eot");
+  src: url("../font/fontawesome-webfont.eot") format("embedded-opentype"), url("../font/fontawesome-webfont.woff") format("woff"), url("../font/fontawesome-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -135,7 +135,7 @@ ul.icons {
 
 .icon-border {
   border: solid 1px #eeeeee;
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
@@ -1551,7 +1551,8 @@ blockquote {
 img {
   display: block;
   max-width: 100%;
-  margin: 2% auto; }
+  margin: 2% auto;
+  height: auto; }
   img + i {
     display: none; }
 
@@ -1580,8 +1581,6 @@ img {
   display: block;
   position: relative; }
   .full-width img {
-    width: 100%;
-    max-width: 2400px;
     margin-bottom: 0; }
     .full-width img + i {
       bottom: 100px; }
@@ -2276,7 +2275,7 @@ pre {
 
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -2301,7 +2300,7 @@ pre {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid; }
 
   thead {
