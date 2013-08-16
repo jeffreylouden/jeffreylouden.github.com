@@ -400,6 +400,22 @@ nav {
 	left: 0;
 	border-bottom: 1px solid $border-gray;
 
+	#resume-link {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		display: block;
+		margin-top: -25%;
+		i {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+			font-weight: 300;
+		}
+		&:hover {
+			color: $orange;
+		}
+	}
+
 	li {
 		display: inline-block;
 		box-sizing: border-box;

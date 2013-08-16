@@ -1635,6 +1635,18 @@ nav {
   right: 0;
   left: 0;
   border-bottom: 1px solid #dadade; }
+  nav #resume-link {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: block;
+    margin-top: -25%; }
+    nav #resume-link i {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      font-weight: 300; }
+    nav #resume-link:hover {
+      color: #d68230; }
   nav li {
     display: inline-block;
     box-sizing: border-box;
