@@ -1,4 +1,3 @@
-auto:           true
 url:        	"http://jefflouden.com/"
 permalink:      ":title/"
 exclude:        ["README.md", "CNAME"]
