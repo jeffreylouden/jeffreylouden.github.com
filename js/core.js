@@ -131,6 +131,8 @@
     $(doc.documentElement).keyup(function (event) {
         if (event.keyCode === 27) {
             Modal.dismiss();
+            partyOverlay.removeClass(SHOW);
+            htmlbody.removeClass(FIXED);
         }
     });
 
