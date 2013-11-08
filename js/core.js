@@ -22,8 +22,8 @@
         console         =    win.console || {"log": noop, "warn": noop, "error": noop},
 
         wndw                =   $(win),
-        html                =   $('html'),
-        body                =   $('body'),
+        html                =   $(doc.getElementsByTagName('html')),
+        body                =   $(doc.getElementsByTagName('body')),
         htmlbody            =   html.add(body),
 
         iframeString        =   '<iframe allowfullscreen frameborder="0" width="560" height="350" id="yt-{{{yt-id}}}" src="//www.youtube.com/embed/{{{yt-id}}}/?enablejsapi=1&amp;playerapiid={{{yt-id}}}&amp;wmode=transparent&amp;autohide=0&amp;autoplay=0&amp;fs=1&amp;hd=1&amp;rel=0&amp;showinfo=0&amp;start=&amp;theme=dark&amp;cc_load_policy=0"></iframe>',
@@ -32,10 +32,10 @@
 
         footnote            =   $('.footnote'),
 
-        footer              =   $('footer'),
-        credits             =   footer.find('#credits'),
+        footer              =   $(doc.getElementsByTagName('footer')),
+        credits             =   $(doc.getElementById('#credits')),
         partyMode           =   credits.find('i'),
-		partyOverlay        =   $('#party-mode'),
+		partyOverlay        =   $(doc.getElementById('#party-mode')),
 
         modalLink           =   $('.modal'),
         modal,
@@ -131,6 +131,8 @@
     $(doc.documentElement).keyup(function (event) {
         if (event.keyCode === 27) {
             Modal.dismiss();
+            partyOverlay.removeClass(SHOW);
+            htmlbody.removeClass(FIXED);
         }
     });
 
