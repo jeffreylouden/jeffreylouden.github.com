@@ -1,13 +1,23 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
-
-
+---
+layout: none
+---
 /* TEAM */
-	Zach Stubenvoll -- Designer -- @zachstubenvoll
-	Jeffrey Louden -- Developer -- @jeffreylouden
-	
+    Developer:      Jeffrey Louden
+    Contact:        jeff@jefflouden.com
+    Facebook:       https://www.facebook.com/jeffreyslouden
+    Twitter:        @jeffreylouden
+    From:           Louisville, Kentucky, United States
+
+    Designer:		Zach Stubenvoll
+    Contact:		zach@zachstubenvoll.com
+    Facebook:		https://www.facebook.com/zachstubenvoll
+    Twitter:		@zachstubenvoll
+    From:			Cincinnati, Ohio, United States
 
 /* SITE */
-  Standards: HTML5, CSS3, Sass
-  Components: Modernizr, jQuery
-  Software: SublimeText2, CodeKit
+    Last update:    {{ site.time | date: "%Y-%m-%d" }}
+    Language:       English
+    Doctype:        HTML5
+    IDE:            SublimeText
+    Standards:      HTML5, CSS3 [Sass]
+    Components:     Jekyll, jQuery, Modernizr, HTML5 Boilerplate, Sagan, Grunt, Bower
