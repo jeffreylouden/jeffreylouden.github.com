@@ -24,18 +24,60 @@ intro: Yo Internet, I heard you like grids.
 	<h3>How do I use it?</h3>
 	<p><strong>Note:</strong> Sagan is built on SASS because it's super awesome.</p>
 	<p>In its more basic implementation it might look something like this:
-	<pre>
-	<code>
+		<pre>
+			<code>
 @import mixins
 @import grid
 
 +columns($selector:'#main', $count:"container")
 +columns($selector:'header, nav, section, footer', $count:"row")
 
-@media screen and (min-width: 40em)
+@media (min-width: 40em)
   +columns($selector:'article', $count:9)
   +columns($selector:'aside', $count:3)
-	</code>
-	</pre>
+			</code>
+		</pre>
+		</p>
+		<p>This would compile into the following:
+			<pre>
+				<code>
+#main {
+  max-width: 959.97872px;
+  padding: 0 1.06383%;
+  margin-right: auto;
+  margin-left: auto;
+  zoom: 1; }
+  #main:before, #main:after {
+    content: "";
+    display: table; }
+  #main:after {
+    clear: both; }
+
+header, nav, section, footer {
+  zoom: 1;
+  clear: both; }
+  header:before, header:after, nav:before, nav:after, section:before, section:after, footer:before, footer:after {
+    content: "";
+    display: table; }
+  header:after, nav:after, section:after, footer:after {
+    clear: both; }
+
+@media (min-width: 40em) {
+  article {
+    float: left;
+    width: 74.46809%;
+    margin: 0 0 0 2.12766%; }
+    article:first-child {
+      margin-left: 0; }
+
+  aside {
+    float: left;
+    width: 23.40426%;
+    margin: 0 0 0 2.12766%; }
+    aside:first-child {
+      margin-left: 0; } }
+			</code>
+		</pre>
 	</p>
+	<p>The previous CSS minified amounts to 601 bytes (XXXX gzipped). Granted this is an extremely simple example, but since most sites have a sitewide layout and only deviate on a project basis having the entire CSS structure needed for the standard layout weigh in at 601 bytes with no classes needed in the markup is just nice.</p>
 </section>
