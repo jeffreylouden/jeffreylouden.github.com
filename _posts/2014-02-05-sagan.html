@@ -1,0 +1,41 @@
+---
+layout: default
+title: Sagan
+intro: Yo Internet, I heard you like grids.
+---
+
+<section>
+	<p>During the last two and a half years, <a href="http://kylerush.net">Kyle</a> and <a href="http://dryan.io">Daniel</a> have taught me more things than I could ever count, so this tiny project is very much dedicated to them.</p>
+</section>
+<section>
+  <h3>The Idea</h3>
+	<blockquote><p>&quot;If you want to make an apple pie from scratch, you much first invent the universe.&quot;</p><cite>Carl Sagan</cite></blockquote>
+	<p>Nearly every grid system I've used since the invention of grid systems are class-based systems. The required some combonation of classes within the markup to achieve an infinite number of page layouts. This includes a project called <a href="http://dryan.io">CSS Smart Grid</a> that Daniel wrote during the early days of the Obama campaign that we used for the next sixteen months. It was a lifesaver and much like <a href="">Bootstrap</a> and a host of other frameworks that exploded between mid 2011 and November 2012, it made developing a rapid pace possible.</p> 
+	<p>That said, nothing is ever the perfect solution and I started to pinpoint a few flaws in these class-based grids:</p>
+	<ol>
+		<li>I needed to include the grid (with all of it's potential offset classes) whether I used them or not. It is totally fair that this additional bloat in a gzipped CSS file is negliable, but it was still unecessary regardless. I really just wanted to include the specific CSS required and opt out of everything else, but it was kind of an all or nothing solution.</li>
+		<li>They added weight to my HTML document. It's obvious that the faster the HTML document is served, the sooner everything else can happen. In a world of asynchonorous calls, lazy loading, and the fundamental nature of node.js's non-blocking model, the document itself will indefinitely be a blocking call, so it becomes fundamentally more important that we deliver it as soon as possible. Additionally, the nature of HTML is expanding and more and more content is becoming necessary such as microformats, aria roles, and ALL the meta data. Trimming the fat has never been more important.</li>
+		<li>Responsive flexibility starts to suffer. For example, lets assume we are using a 12 column grid and for a project and for desktop I would like an <code>article</code> to be 9 columns wide and adjacent <code>aside</code> to be 3 columns, but on tablet they should each be 6 columns. With a class based system, we have two main options: 1. swap the classes with javascript 2. override the classes for 9 and 3 columns at the tablet media query. Neither of these is ideal because we either need javascript to essentially replicate a media query (which CSS obviously already does) or write more CSS on top already including the entire grid.</li>
+	</ol>
+	<p>So I thought I'd take a stab at fixing this and that stab is Sagan.</p>
+	<p>The first iteration of Sagan was written approximately a year ago as nothing more than an idea for <a href="http://www.newyorker.com">The New Yorker</a> before I had officially started. We started to use it internally and it was clear that it made many of the responsive layouts much easier to achieve and additionally resulted in a small, but measurable improvement in HTML and CSS performance. The project is still very much in a beta stage, but ulitmately, it achieved everything I wanted.</p>
+</section>
+<section>
+	<h3>How do I use it?</h3>
+	<p><strong>Note:</strong> Sagan is built on SASS because it's super awesome.</p>
+	<p>In its more basic implementation it might look something like this:
+	<pre>
+	<code>
+@import mixins
+@import grid
+
++columns($selector:'#main', $count:"container")
++columns($selector:'header, nav, section, footer', $count:"row")
+
+@media screen and (min-width: 40em)
+  +columns($selector:'article', $count:9)
+  +columns($selector:'aside', $count:3)
+	</code>
+	</pre>
+	</p>
+</section>
