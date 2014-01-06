@@ -211,12 +211,17 @@ a {
 	}
 }
 
+strong {
+	font-weight: 700;
+}
+
 p {
 	font-family: $freight;
 	font-size: 1rem;
 	line-height: 1.8rem;
 	margin: 0 auto;
 	padding: $light-padding;
+	overflow: hidden;
 	&:last-child {
 		margin: 0 auto $light-padding;
 	}
@@ -476,7 +481,6 @@ nav {
 		padding: $light-padding $medium-padding;
 		background: white;
 		clear: both;
-
 		h3 {
 			text-transform: capitalize;
 		}
@@ -724,7 +728,7 @@ footer {
 pre {
 	background: $gray;
 	margin: $medium-padding -7%;
-	padding: $medium-padding;
+	padding: 0 $medium-padding;
 	font-family: Menlo,Monaco,monospace;
 	position: relative;
 	-moz-tab-size: 2;
@@ -735,6 +739,8 @@ pre {
 	font-size: 0.8rem;
 	line-height: 1.4rem;
 	code {
+		color: white;
+		font-weight: 700;
 		max-width: 70%;
 		margin: 0 auto;
 		overflow: auto;
@@ -845,10 +851,16 @@ pre {
 			}
 		}
 
-		ul {
+		ul,
+		ol {
 			max-width: 70%;
 			margin: 2% auto;
 			overflow: hidden;
+			li {
+				font-size: 1.25rem;
+				line-height: 2.2rem;
+				font-family: $freight;
+			}
 			&.floated {
 				li {
 					box-sizing: border-box;
@@ -871,6 +883,17 @@ pre {
 			}
 			.info & {
 				padding: $medium-padding;
+			}
+		}
+		ol {
+			list-style-type: decimal;
+			list-style-position: outside;
+			padding-left: 2em;
+			li {
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}

@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                 style: 'compressed'
               },
               files: {
-                '<%= css %>/style.css': 'css/style.sass'
+                '<%= css %>/style.css': 'css/style.scss'
               }
             },
             dev: {
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                 style: 'expanded'
               },
               files: {
-                'css/style.css': 'css/style.sass',
+                'css/style.css': 'css/style.scss',
               }
             }
         },
@@ -86,10 +86,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-mocha');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.registerTask('watchSass', ['watch:sass']);
     grunt.registerTask('watchJS', ['watch:js']);
-    grunt.registerTask('default', ['sass', 'jshint', 'uglify', 'imagemin']);
+    grunt.registerTask('default', ['sass', 'jshint', 'uglify']);
 
 };
