@@ -1,17 +1,21 @@
 {
-  "name": "Jeffrey Louden",
-  "version": "0.2",
+  "name": "jeffrey-louden",
   "repository": {
     "type": "git",
     "url": "https://github.com/jeffreylouden/jeffreylouden.github.com.git"
+  },
+  "author": "Jeffrey Louden",
+  "license": "MIT",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "0.4.x",
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-sass": "0.4.x",
-    "grunt-bower": "~0.5.1",
     "grunt-shell": "0.3.x",
-    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.0"
   }
 }
