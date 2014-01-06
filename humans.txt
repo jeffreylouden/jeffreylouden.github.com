@@ -8,11 +8,11 @@ layout: none
     Twitter:        @jeffreylouden
     From:           Louisville, Kentucky, United States
 
-    Designer:		Zach Stubenvoll
-    Contact:		zach@zachstubenvoll.com
-    Facebook:		https://www.facebook.com/zachstubenvoll
-    Twitter:		@zachstubenvoll
-    From:			Cincinnati, Ohio, United States
+    Designer:       Zach Stubenvoll
+    Contact:        zach@zachstubenvoll.com
+    Facebook:       https://www.facebook.com/zachstubenvoll
+    Twitter:        @zachstubenvoll
+    From:           Cincinnati, Ohio, United States
 
 /* SITE */
     Last update:    {{ site.time | date: "%Y-%m-%d" }}
