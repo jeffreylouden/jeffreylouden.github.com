@@ -33,9 +33,9 @@
         footnote            =   $('.footnote'),
 
         footer              =   $(doc.getElementsByTagName('footer')),
-        credits             =   $(doc.getElementById('#credits')),
+        credits             =   $(doc.getElementById('credits')),
         partyMode           =   credits.find('i'),
-		partyOverlay        =   $(doc.getElementById('#party-mode')),
+		partyOverlay        =   $(doc.getElementById('party-mode')),
 
         modalLink           =   $('.modal'),
         modal,
