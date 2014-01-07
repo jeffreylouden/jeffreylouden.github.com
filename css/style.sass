@@ -3,7 +3,7 @@
 @import font-awesome
 @import syntax
 
-@-webkit-keyframes partyMode
++keyframes(partyMode)
   0%
     background-color: rgba(255, 0, 0, 0.6)
   20%
@@ -17,38 +17,7 @@
   100%
     background-color: rgba(255, 198, 0, 0.6)
 
-
-@-moz-keyframes partyMode
-  0%
-    background-color: rgba(255, 0, 0, 0.6)
-  20%
-    background-color: rgba(0, 255, 108, 0.6)
-  40%
-    background-color: rgba(240, 255, 0, 0.6)
-  60%
-    background-color: rgba(156, 0, 255, 0.6)
-  80%
-    background-color: rgba(0, 240, 255, 0.6)
-  100%
-    background-color: rgba(255, 198, 0, 0.6)
-
-
-@keyframes partyMode
-  0%
-    background-color: rgba(255, 0, 0, 0.6)
-  20%
-    background-color: rgba(0, 255, 108, 0.6)
-  40%
-    background-color: rgba(240, 255, 0, 0.6)
-  60%
-    background-color: rgba(156, 0, 255, 0.6)
-  80%
-    background-color: rgba(0, 240, 255, 0.6)
-  100%
-    background-color: rgba(255, 198, 0, 0.6)
-
-
-@-webkit-keyframes modalIn
++keyframes(modalIn)
   0%
     -webkit-transform: scale(1.5)
     opacity: 0
@@ -56,90 +25,24 @@
     -webkit-transform: scale(1)
     opacity: 1
 
-
-@-moz-keyframes modalIn
-  0%
-    -moz-transform: scale(1.5)
-    opacity: 0
-  100%
-    -moz-transform: scale(1)
-    opacity: 1
-
-
-@keyframes modalIn
-  0%
-    -ms-transform: scale(1.5)
-    opacity: 0
-  100%
-    -ms-transform: scale(1)
-    opacity: 1
-
-
-@-webkit-keyframes modalOut
++keyframes(modalOut)
   0%
     opacity: 1
   100%
     -webkit-transform: scale(1.5)
     opacity: 0
 
-
-@-moz-keyframes modalOut
-  0%
-    opacity: 1
-  100%
-    -moz-transform: scale(1.5)
-    opacity: 0
-
-
-@keyframes modalOut
-  0%
-    opacity: 1
-  100%
-    -ms-transform: scale(1.5)
-    opacity: 0
-
-
-@-webkit-keyframes play
++keyframes(play)
   from
     background-position: 0px
   to
     background-position: -646px
 
-
-@-moz-keyframes play
-  from
-    background-position: 0px
-  to
-    background-position: -646px
-
-
-@keyframes play
-  from
-    background-position: 0px
-  to
-    background-position: -646px
-
-
-@-webkit-keyframes play-retina
++keyframes(play-retina)
   from
     background-position: 0px
   to
     background-position: -606px
-
-
-@-moz-keyframes play-retina
-  from
-    background-position: 0px
-  to
-    background-position: -606px
-
-
-@keyframes play-retina
-  from
-    background-position: 0px
-  to
-    background-position: -606px
-
 
 $proxima: "proxima-nova-1", "proxima-nova-2", helvetica, sans-serif
 $freight: "freight-sans-pro-1", "freight-sans-pro-2", helvetica, sans-serif
@@ -547,6 +450,8 @@ footer
       margin-bottom: 1.8em
     p
       padding: 0
+      margin-bottom: 4%
+      max-width: 100%
 
 #colophon
   overflow: hidden
@@ -791,8 +696,6 @@ pre
         +prefix("column-count", 2)
         +prefix("column-gap", "20px")
         +prefix("column-break-inside", "avoid-column")
-        p
-          margin-bottom: 4%
   .info
     h1,
     h2
