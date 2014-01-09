@@ -2,7 +2,7 @@
 layout: default
 title: Sagan
 intro: <iframe src="http://ghbtns.com/github-btn.html?user=jeffreylouden&repo=sagan&type=watch"
-  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>Yo Internet, I heard you like grids.
+  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20" class="gh-btn"></iframe>Yo Internet, I heard you like grids.
 ---
 
 <section>
@@ -22,9 +22,7 @@ intro: <iframe src="http://ghbtns.com/github-btn.html?user=jeffreylouden&repo=sa
 	<h3>How do I use it?</h3>
 	<p><strong>Note:</strong> Sagan is built on SASS because it's super awesome.</p>
 	<p>In its more basic implementation it might look something like this:
-		<pre>
-			<code>
-@import grid
+{% highlight css %}@import grid
 
 +columns($selector:'#main', $count:"container")
 +columns($selector:'header, nav, section, footer', $count:"row")
@@ -32,12 +30,10 @@ intro: <iframe src="http://ghbtns.com/github-btn.html?user=jeffreylouden&repo=sa
 @media (min-width: 40em)
   +columns($selector:'article', $count:9)
   +columns($selector:'aside', $count:3)
-			</code>
-		</pre>
+{% endhighlight %}
 		</p>
 		<p>This would compile into the following:
-			<pre>
-				<code>
+{% highlight css %}
 #main {
   max-width: 959.97872px;
   padding: 0 1.06383%;
@@ -73,14 +69,11 @@ header, nav, section, footer {
     margin: 0 0 0 2.12766%; }
     aside:first-child {
       margin-left: 0; } }
-			</code>
-		</pre>
+{% endhighlight %}
 	</p>
 	<p>The previous CSS minified amounts to 601 bytes (287 bytes gzipped). Granted this is an extremely simple example, but since most sites have a sitewide layout and only deviate on a project basis having the entire CSS structure needed for the standard layout weigh in at 601 bytes with no classes needed in the markup is just nice.</p>
 </section>
 <section>
   <p><img src="http://www.brainpickings.org/wp-content/uploads/2013/11/carlsagan1.jpg" alt="Carl Sagan" width="300" height="249" class="right" />
-  This project is dedicated to my childhood hero, <a href="http://www.carlsagan.com/" title="Carl Sagan">Carl Sagan</a>, for teaching me to be curious about everything.
-  <br /> <br />
-  It is also dedicated to <a href="http://kylerush.net">Kyle</a> and <a href="http://dryan.io">Daniel</a> for teaching me more than they will ever realize.</p>
+  This project is dedicated to my childhood hero, <a href="http://www.carlsagan.com/" title="Carl Sagan">Carl Sagan</a>, for teaching me to be curious about everything. It is also dedicated to <a href="http://kylerush.net">Kyle</a> and <a href="http://dryan.io">Daniel</a> for teaching me more than they will ever realize.</p>
 </section>

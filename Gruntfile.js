@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                 style: 'compressed'
               },
               files: {
-                '<%= css %>/style.css': 'css/style.scss'
+                '<%= css %>/style.css': 'css/style.sass'
               }
             },
             dev: {
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                 style: 'expanded'
               },
               files: {
-                'css/style.css': 'css/style.scss',
+                'css/style.css': 'css/style.sass',
               }
             }
         },
