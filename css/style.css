@@ -1320,291 +1320,6 @@ ul.icons li [class*=" icon-"] {
   content: "\f115";
 }
 
-code {
-  /* Comment */
-  /* Error */
-  /* Generic */
-  /* Keyword */
-  /* Literal */
-  /* Name */
-  /* Operator */
-  /* Other */
-  /* Punctuation */
-  /* Comment.Multiline */
-  /* Comment.Preproc */
-  /* Comment.Single */
-  /* Comment.Special */
-  /* Generic.Deleted */
-  /* Generic.Emph */
-  /* Generic.Error */
-  /* Generic.Heading */
-  /* Generic.Inserted */
-  /* Generic.Output */
-  /* Generic.Prompt */
-  /* Generic.Strong */
-  /* Generic.Subheading */
-  /* Generic.Traceback */
-  /* Keyword.Constant */
-  /* Keyword.Declaration */
-  /* Keyword.Namespace */
-  /* Keyword.Pseudo */
-  /* Keyword.Reserved */
-  /* Keyword.Type */
-  /* Literal.Date */
-  /* Literal.Number */
-  /* Literal.String */
-  /* Name.Attribute */
-  /* Name.Builtin */
-  /* Name.Class */
-  /* Name.Constant */
-  /* Name.Decorator */
-  /* Name.Entity */
-  /* Name.Exception */
-  /* Name.Function */
-  /* Name.Label */
-  /* Name.Namespace */
-  /* Name.Other */
-  /* Name.Property */
-  /* Name.Tag */
-  /* Name.Variable */
-  /* Operator.Word */
-  /* Text.Whitespace */
-  /* Literal.Number.Float */
-  /* Literal.Number.Hex */
-  /* Literal.Number.Integer */
-  /* Literal.Number.Oct */
-  /* Literal.String.Backtick */
-  /* Literal.String.Char */
-  /* Literal.String.Doc */
-  /* Literal.String.Double */
-  /* Literal.String.Escape */
-  /* Literal.String.Heredoc */
-  /* Literal.String.Interpol */
-  /* Literal.String.Other */
-  /* Literal.String.Regex */
-  /* Literal.String.Single */
-  /* Literal.String.Symbol */
-  /* Name.Builtin.Pseudo */
-  /* Name.Variable.Class */
-  /* Name.Variable.Global */
-  /* Name.Variable.Instance */
-  /* Literal.Number.Integer.Long */
-}
-code .hll {
-  background-color: #ffffcc;
-}
-code .c {
-  color: #bc9458;
-  font-style: italic;
-}
-code .err {
-  color: #e6e1dc;
-}
-code .g {
-  color: #e6e1dc;
-}
-code .k {
-  color: #cc7833;
-}
-code .l {
-  color: #e6e1dc;
-}
-code .n {
-  color: #e6e1dc;
-}
-code .o {
-  color: #e6e1dc;
-}
-code .x {
-  color: #e6e1dc;
-}
-code .p {
-  color: #e6e1dc;
-}
-code .cm {
-  color: #bc9458;
-  font-style: italic;
-}
-code .cp {
-  color: #cc7833;
-}
-code .c1 {
-  color: #bc9458;
-  font-style: italic;
-}
-code .cs {
-  color: #bc9458;
-  font-style: italic;
-}
-code .gd {
-  color: #e6e1dc;
-  background-color: #660000;
-}
-code .ge {
-  color: #e6e1dc;
-}
-code .gr {
-  color: white;
-  background-color: #990000;
-}
-code .gh {
-  color: white;
-}
-code .gi {
-  color: #e6e1dc;
-  background-color: #144212;
-}
-code .go {
-  color: #e6e1dc;
-}
-code .gp {
-  color: #e6e1dc;
-}
-code .gs {
-  color: #e6e1dc;
-}
-code .gu {
-  color: white;
-}
-code .gt {
-  color: #e6e1dc;
-}
-code .kc {
-  color: #cc7833;
-}
-code .kd {
-  color: #cc7833;
-}
-code .kn {
-  color: #cc7833;
-}
-code .kp {
-  color: #cc7833;
-}
-code .kr {
-  color: #cc7833;
-}
-code .kt {
-  color: #da4939;
-}
-code .ld {
-  color: #e6e1dc;
-}
-code .m {
-  color: #a5c261;
-}
-code .s {
-  color: #a5c261;
-}
-code .na {
-  color: #ffc66d;
-}
-code .nb {
-  color: #e6e1dc;
-}
-code .nc {
-  color: #e6e1dc;
-}
-code .no {
-  color: #6d9cbe;
-}
-code .nd {
-  color: #e6e1dc;
-}
-code .ni {
-  color: #e6e1dc;
-}
-code .ne {
-  color: #e6e1dc;
-}
-code .nf {
-  color: #ffc66d;
-}
-code .nl {
-  color: #e6e1dc;
-}
-code .nn {
-  color: #e6e1dc;
-}
-code .nx {
-  color: #e6e1dc;
-}
-code .py {
-  color: #e6e1dc;
-}
-code .nt {
-  color: #cc7833;
-}
-code .nv {
-  color: #d0d0ff;
-}
-code .ow {
-  color: #e6e1dc;
-}
-code .w {
-  color: #e6e1dc;
-}
-code .mf {
-  color: #a5c261;
-}
-code .mh {
-  color: #a5c261;
-}
-code .mi {
-  color: #a5c261;
-}
-code .mo {
-  color: #a5c261;
-}
-code .sb {
-  color: #a5c261;
-}
-code .sc {
-  color: #a5c261;
-}
-code .sd {
-  color: #a5c261;
-}
-code .s2 {
-  color: #a5c261;
-}
-code .se {
-  color: #a5c261;
-}
-code .sh {
-  color: #a5c261;
-}
-code .si {
-  color: #a5c261;
-}
-code .sx {
-  color: #a5c261;
-}
-code .sr {
-  color: #a5c261;
-}
-code .s1 {
-  color: #a5c261;
-}
-code .ss {
-  color: #a5c261;
-}
-code .bp {
-  color: #e6e1dc;
-}
-code .vc {
-  color: #d0d0ff;
-}
-code .vg {
-  color: #d0d0ff;
-}
-code .vi {
-  color: #d0d0ff;
-}
-code .il {
-  color: #a5c261;
-}
-
 @-webkit-keyframes partyMode {
   0% {
     background-color: rgba(255, 0, 0, 0.6);
@@ -1952,7 +1667,39 @@ code .il {
 
 .gh-btn {
   display: block;
+  margin: 0 auto 20px;
+}
+
+.gist {
+  max-width: 70%;
   margin: 0 auto;
+}
+.gist .gist-file .gist-data {
+  font-size: 80% !important;
+}
+
+strong {
+  font-weight: 700;
+}
+
+pre code {
+  display: block;
+  padding: 10px;
+}
+
+code {
+  font-size: 80%;
+  line-height: 1.5rem;
+  display: inline-block;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  max-width: 70%;
+  margin: 0 auto;
+  font-weight: 700;
+  box-sizing: border-box;
+  background: #f5f5f6;
+  border: 1px solid #dadade;
+  padding: 0 5px;
+  border-radius: 3px;
 }
 
 nav li.logo a, .info h1 {
@@ -2097,6 +1844,9 @@ img {
 }
 img + i {
   display: none;
+}
+img.shadow {
+  box-shadow: 5px 5px 0 #363535;
 }
 
 .vid-contain {
@@ -2466,29 +2216,6 @@ footer {
   margin-right: 10px;
   position: relative;
   top: 3px;
-}
-
-pre {
-  background: #363535;
-  margin: 4% -7% 0;
-  padding: 4%;
-  font-family: Menlo, Monaco, monospace;
-  position: relative;
-  -moz-tab-size: 2;
-  tab-size: 2;
-  word-break: normal;
-  -moz-hyphens: none;
-  hyphens: none;
-  font-size: 0.8rem;
-  line-height: 1.4rem;
-}
-pre code {
-  max-width: 70%;
-  margin: 0 auto;
-  overflow: auto;
-  background: none;
-  white-space: pre;
-  display: block;
 }
 
 @media screen and (min-width: 40em) {

@@ -2,7 +2,6 @@
 @import variables
 @import reset
 @import font-awesome
-@import syntax
 
 +keyframes(partyMode)
   0%
@@ -45,9 +44,40 @@
   to
     background-position: -606px
 
+// GitHub related styles
+
 .gh-btn
   display: block
+  margin: 0 auto 20px
+
+.gist
+  max-width: 70%
   margin: 0 auto
+  .gist-file .gist-data
+    font-size: 80% !important
+
+strong
+  font-weight: 700
+
+// Code sections
+pre
+  code
+    display: block
+    padding: 10px
+
+code
+  font-size: 80%
+  line-height: 1.5rem
+  display: inline-block
+  font-family: Consolas, "Liberation Mono", Courier, monospace
+  max-width: 70%
+  margin: 0 auto
+  font-weight: 700
+  box-sizing: border-box
+  background: $light-gray
+  border: 1px solid $border-gray
+  padding: 0 5px
+  border-radius: 3px
 
 %ir
   display: block
@@ -168,6 +198,8 @@ img
   height: auto
   & + i
     display: none
+  &.shadow
+    box-shadow: 5px 5px 0 $gray
 
 .vid-contain
   overflow: hidden
@@ -483,27 +515,6 @@ footer
     margin-right: 10px
     position: relative
     top: 3px
-
-pre
-  background: $gray
-  margin: $medium-padding -7% 0
-  padding: $medium-padding
-  font-family: Menlo,Monaco,monospace
-  position: relative
-  -moz-tab-size: 2
-  tab-size: 2
-  word-break: normal
-  -moz-hyphens: none
-  hyphens: none
-  font-size: 0.8rem
-  line-height: 1.4rem
-  code
-    max-width: 70%
-    margin: 0 auto
-    overflow: auto
-    background: none
-    white-space: pre
-    display: block
 
 @media screen and (min-width: 40em)
   h1

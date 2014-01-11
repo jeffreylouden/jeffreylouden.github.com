@@ -2,78 +2,53 @@
 layout: default
 title: Sagan
 intro: <iframe src="http://ghbtns.com/github-btn.html?user=jeffreylouden&repo=sagan&type=watch"
-  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20" class="gh-btn"></iframe>Yo Internet, I heard you like grids.
+  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20" class="gh-btn"></iframe>Yo dawg, I heard you like grids, so I removed the class and added some sass. Sagan is a sassy grid system focusing on simplicity, performance, and stardust.
+extra_css: css/sagan.css
+
 ---
 
 <section>
 	<blockquote><p>&quot;If you want to make an apple pie from scratch, you much first invent the universe.&quot;</p><cite>Carl Sagan</cite></blockquote>
-  <h3>The Idea</h3>
-	<p>Nearly every grid system I've used since the invention of grid systems are class-based systems. The required some combonation of classes within the markup to achieve an infinite number of page layouts. This includes a project called <a href="http://dryan.io">CSS Smart Grid</a> that Daniel wrote during the early days of the Obama campaign that we used for the next sixteen months. It was a lifesaver and much like <a href="">Bootstrap</a> and a host of other frameworks that exploded between mid 2011 and November 2012, it made developing a rapid pace possible.</p>
-	<p>That said, nothing is ever the perfect solution and I started to pinpoint a few flaws in these class-based grids:</p>
+  <h3>Class warfare?</h3>
+	<p>Nearly every grid system I've used since the invention of grid systems are class-based systems. They required some combonation of classes within the markup to achieve an infinite number of page layouts. This includes a project called <a href="http://css.gd" title="CSS Smart Grid">CSS Smart Grid</a> that <a href="http://dryan.com/" title="Daniel Ryan">Daniel Ryan</a> wrote during the early days of the Obama campaign that we used for the next sixteen months. It was a lifesaver and much like <a href="http://getbootstrap.com/" title="Twitter Bootstrap">Bootstrap</a> it made developing rapidly possible. These systems changed the way most front-end developers outlined, prototyped, and eventually built their products, but they are not without their flaws:</p>
 	<ol>
-		<li>I needed to include the grid (with all of it's potential offset classes) whether I used them or not. It is totally fair that this additional bloat in a gzipped CSS file is negliable, but it was still unecessary regardless. I really just wanted to include the specific CSS required and opt out of everything else, but it was kind of an all or nothing solution.</li>
-		<li>They added weight to my HTML document. It's obvious that the faster the HTML document is served, the sooner everything else can happen. In a world of asynchonorous calls, lazy loading, and the fundamental nature of node.js's non-blocking model, the document itself will indefinitely be a blocking call, so it becomes fundamentally more important that we deliver it as soon as possible. Additionally, the nature of HTML is expanding and more and more content is becoming necessary such as microformats, aria roles, and ALL the meta data. Trimming the fat has never been more important.</li>
-		<li>Responsive flexibility starts to suffer. For example, lets assume we are using a 12 column grid and for a project and for desktop I would like an <code>article</code> to be 9 columns wide and adjacent <code>aside</code> to be 3 columns, but on tablet they should each be 6 columns. With a class based system, we have two main options: 1. swap the classes with javascript 2. override the classes for 9 and 3 columns at the tablet media query. Neither of these is ideal because we either need javascript to essentially replicate a media query (which CSS obviously already does) or write more CSS on top already including the entire grid.</li>
+		<li>You need to include the entire grid (with all of it's columns and offset classes) whether I used them or not. This additional bloat in a gzipped CSS file is negliable, but it is still unnecessary in many scenarios.</li>
+		<li>These systems added weight to the HTML document. Markup has changed since many of these systems were introduced and the documents themselves are increasing in size with the addition of microformats, aria roles, and ALL the meta data.</li>
+		<li>Responsive flexibility starts to suffer. Recently, many of the projects I've worked on required different column layout across break points and this is difficult to achieve without using javascript or overriding the grid system.</li>
 	</ol>
-	<p>So I thought I'd take a stab at fixing this.</p>
-	<p>The first iteration of Sagan was written approximately a year ago as nothing more than an idea for <a href="http://www.newyorker.com">The New Yorker</a> before I had officially started. I wrote mose of the code and then left it alone for close to six months. Eventually, we experimented with it internally and it made many of our responsive layouts much easier to build and resulted in a measurable improvements in both HTML and CSS performance and size. The project is still very much in a beta stage, but it has achieved everything I'd hoped for up to this point.</p>
+	<p>These are all very solvable problems. The first iteration of Sagan was written approximately a year ago as nothing more than an idea for <a href="http://www.newyorker.com" title="The New Yorker">The New Yorker</a> before I had officially started working as their Tech Lead. It made many of our responsive layouts much easier to build, provided more freedom to our designer, and resulted in measurable improvements in both performance and size of our code.</p>
 </section>
 <section>
-	<h3>How do I use it?</h3>
-	<p><strong>Note:</strong> Sagan is built on SASS because it's super awesome.</p>
+	<h3>The Basics</h3>
 	<p>In its more basic implementation it might look something like this:
-{% highlight css %}@import grid
-
-+columns($selector:'#main', $count:"container")
-+columns($selector:'header, nav, section, footer', $count:"row")
-
-@media (min-width: 40em)
-  +columns($selector:'article', $count:9)
-  +columns($selector:'aside', $count:3)
-{% endhighlight %}
-		</p>
-		<p>This would compile into the following:
-{% highlight css %}
-#main {
-  max-width: 959.97872px;
-  padding: 0 1.06383%;
-  margin-right: auto;
-  margin-left: auto;
-  zoom: 1; }
-  #main:before, #main:after {
-    content: "";
-    display: table; }
-  #main:after {
-    clear: both; }
-
-header, nav, section, footer {
-  zoom: 1;
-  clear: both; }
-  header:before, header:after, nav:before, nav:after, section:before, section:after, footer:before, footer:after {
-    content: "";
-    display: table; }
-  header:after, nav:after, section:after, footer:after {
-    clear: both; }
-
-@media (min-width: 40em) {
-  article {
-    float: left;
-    width: 74.46809%;
-    margin: 0 0 0 2.12766%; }
-    article:first-child {
-      margin-left: 0; }
-
-  aside {
-    float: left;
-    width: 23.40426%;
-    margin: 0 0 0 2.12766%; }
-    aside:first-child {
-      margin-left: 0; } }
-{% endhighlight %}
-	</p>
-	<p>The previous CSS minified amounts to 601 bytes (287 bytes gzipped). Granted this is an extremely simple example, but since most sites have a sitewide layout and only deviate on a project basis having the entire CSS structure needed for the standard layout weigh in at 601 bytes with no classes needed in the markup is just nice.</p>
+  <script src="https://gist.github.com/jeffreylouden/8372302.js"></script>
+	<p>This would compile into the following:</p>
+  <script src="https://gist.github.com/jeffreylouden/8372346.js"></script>
+	<p>The previous CSS minified amounts to 601 bytes (287 bytes gzipped). Granted this is an extremely simple example, but since most sites implement a sitewide layout and only deviate from that in isolation, this is representative of an average use case.</p>
+  <ul>
+    <li><strong>Here are a few demos:</strong></li>
+    <li><a href="http://jeffreylouden.github.io/sagan/demo-basic.html">Basic demo</a></li>
+    <li><a href="http://jeffreylouden.github.io/sagan/demo-basic-flexbox.html">Basic flexbox demo</a></li>
+  </ul>
 </section>
 <section>
-  <p><img src="http://www.brainpickings.org/wp-content/uploads/2013/11/carlsagan1.jpg" alt="Carl Sagan" width="300" height="249" class="right" />
-  This project is dedicated to my childhood hero, <a href="http://www.carlsagan.com/" title="Carl Sagan">Carl Sagan</a>, for teaching me to be curious about everything. It is also dedicated to <a href="http://kylerush.net">Kyle</a> and <a href="http://dryan.io">Daniel</a> for teaching me more than they will ever realize.</p>
+  <h3>The Options</h3>
+  <p>Sagan has a ton of options available so only generate the code you actually need such as standard offset option, ability to push or pull sections, opt outs for a helper <code>.first</code> class and/or <code>:first-child</code> psuedo selector, and a lot more. Additionally, initial flexbox support is available with much more support planned in future releases. Please check out the project on <a href="https://github.com/jeffreylouden/sagan#sagan" title="Sagan on GitHub">GitHub</a> for a detailed list of the options and how to use them.</p>
+</section>
+<section>
+  <h3>Installation</h3>
+  <p>Sagan is available on <a href="https://github.com/jeffreylouden/sagan" title="Sagan on GitHub">GitHub</a> or can be installed via <a href="http://bower.io/" title="Bower">Bower</a> using the following command:</p>
+  <pre><code>bower install sagan</code></pre>
+</section>
+<section>
+  <h3>Caveat</h3>
+  <p>A system like Sagan is clearly not perfect for every scenario. Most prominently, layouts like this <a href="http://www.getskeleton.com/#grid" title="Skeleton Grid">skeleton demo</a> or this <a href="http://css.gd/demo.html" title="CSS Smart Grid demo">Smart Grid demo</a> are much better achieved with a traditional class-based system because the additonal markup necessary for such layouts is much lighter than the additional css Sagan would generate.</p>
+</section>
+<section>
+  <p><img src="http://www.brainpickings.org/wp-content/uploads/2013/11/carlsagan1.jpg" alt="Carl Sagan" width="300" height="249" class="right shadow" />
+  This project is dedicated to my childhood hero, <a href="http://www.carlsagan.com/" title="Carl Sagan">Carl Sagan</a>, for teaching me to be curious about everything.
+  <br /><br />
+  It is also dedicated to <a href="http://kylerush.net" title="Kyle Rush">Kyle</a> and <a href="http://dryan.com" title="Daniel Ryan">Daniel</a> for just being all around amazing.
+  <br /><br />
+  Special thanks to <a href="http://zachstubenvoll.com" title="Zach Stubenvoll">Zach</a> for the logo (even though he's awful).</p>
 </section>
