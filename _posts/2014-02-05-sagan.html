@@ -8,7 +8,6 @@ extra_css: css/sagan.css
 ---
 
 <section>
-	<blockquote><p>&quot;If you want to make an apple pie from scratch, you much first invent the universe.&quot;</p><cite>Carl Sagan</cite></blockquote>
   <h3>Class warfare?</h3>
 	<p>Nearly every grid system I've used since the invention of grid systems are class-based systems. They required some combonation of classes within the markup to achieve an infinite number of page layouts. This includes a project called <a href="http://css.gd" title="CSS Smart Grid">CSS Smart Grid</a> that <a href="http://dryan.com/" title="Daniel Ryan">Daniel Ryan</a> wrote during the early days of the Obama campaign that we used for the next sixteen months. It was a lifesaver and much like <a href="http://getbootstrap.com/" title="Twitter Bootstrap">Bootstrap</a> it made developing rapidly possible. These systems changed the way most front-end developers outlined, prototyped, and eventually built their products, but they are not without their flaws:</p>
 	<ol>
@@ -16,7 +15,8 @@ extra_css: css/sagan.css
 		<li>These systems added weight to the HTML document. Markup has changed since many of these systems were introduced and the documents themselves are increasing in size with the addition of microformats, aria roles, and ALL the meta data.</li>
 		<li>Responsive flexibility starts to suffer. Recently, many of the projects I've worked on required different column layout across break points and this is difficult to achieve without using javascript or overriding the grid system.</li>
 	</ol>
-	<p>These are all very solvable problems. The first iteration of Sagan was written approximately a year ago as nothing more than an idea for <a href="http://www.newyorker.com" title="The New Yorker">The New Yorker</a> before I had officially started working as their Tech Lead. It made many of our responsive layouts much easier to build, provided more freedom to our designer, and resulted in measurable improvements in both performance and size of our code.</p>
+  <p>These are all very solvable problems. The first iteration of Sagan was written approximately a year ago as nothing more than an idea for <a href="http://www.newyorker.com" title="The New Yorker">The New Yorker</a> before I had officially started working as their Tech Lead. It made many of our responsive layouts much easier to build, provided more freedom to our designer, and resulted in measurable improvements in both performance and size of our code.</p>
+  <blockquote><p>&quot;If you want to make an apple pie from scratch, you much first invent the universe.&quot;</p><cite>Carl Sagan</cite></blockquote>
 </section>
 <section>
 	<h3>The Basics</h3>
@@ -29,6 +29,8 @@ extra_css: css/sagan.css
     <li><strong>Here are a few demos:</strong></li>
     <li><a href="http://jeffreylouden.github.io/sagan/demo-basic.html">Basic demo</a></li>
     <li><a href="http://jeffreylouden.github.io/sagan/demo-basic-flexbox.html">Basic flexbox demo</a></li>
+    <li><a href="http://jeffreylouden.github.io/sagan/demo-intermediate.html">Intermediate demo</a></li>
+    <li><a href="http://jeffreylouden.github.io/sagan/demo-intermediate-flexbox.html">Intermediate flexbox demo</a></li>
   </ul>
 </section>
 <section>
@@ -41,8 +43,10 @@ extra_css: css/sagan.css
   <pre><code>bower install sagan</code></pre>
 </section>
 <section>
-  <h3>Caveat</h3>
+  <h3>Caveats</h3>
   <p>A system like Sagan is clearly not perfect for every scenario. Most prominently, layouts like this <a href="http://www.getskeleton.com/#grid" title="Skeleton Grid">skeleton demo</a> or this <a href="http://css.gd/demo.html" title="CSS Smart Grid demo">Smart Grid demo</a> are much better achieved with a traditional class-based system because the additonal markup necessary for such layouts is much lighter than the additional css Sagan would generate.</p>
+  <p>Internet Explorer 8 and below support is disabled by default, but uncommenting a few lines within the code will fully support IE7/8 in all it's bloaty goodness. This support is dependent on the presence of an <code>.oldie</code> class on the <code>html</code> tag.</p>
+  <p>You can find flexbox support at <a href="http://caniuse.com/flexbox" title="Can I Use Flexbox?">Can I Use</a>.</p>
 </section>
 <section>
   <p><img src="http://www.brainpickings.org/wp-content/uploads/2013/11/carlsagan1.jpg" alt="Carl Sagan" width="300" height="249" class="right shadow" />
