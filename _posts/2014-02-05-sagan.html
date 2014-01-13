@@ -46,7 +46,7 @@ extra_css: http://totes.awe-so.me.s3.amazonaws.com/css/sagan.css
 <section>
   <h3>Caveats</h3>
   <p>A system like Sagan is clearly not perfect for every scenario. Most prominently, layouts like this <a href="http://www.getskeleton.com/#grid" title="Skeleton Grid">skeleton demo</a> or this <a href="http://css.gd/demo.html" title="CSS Smart Grid demo">Smart Grid demo</a> are much better achieved with a traditional class-based system because the additional markup necessary for such layouts is much lighter than the additional css Sagan would genera+respond-to($val: $tabletBreakpoint)te.</p>
-  <p>Support for Internet Explorer 8 and below is disabled by default, but uncommenting a few lines within the code will fully support IE7/8 in all it's bloat-y goodness. This support is dependent on the presence of an <code>.oldie</code> class on the <code>html</code> tag. A mixin file is included that will scope your media queries automatically to <code>html.oldie</code> and can be use as such:</p>
+  <p>Support for Internet Explorer 8 and below is disabled by default, but uncommenting a few lines within the code will fully support IE7/8 in all it's bloat-y goodness. This support is dependent on the presence of an <code>.oldie</code> class on the <code>html</code> tag. A mixin file is included that will scope your media queries automatically to <code>html.oldie</code>:</p>
   <script src="https://gist.github.com/jeffreylouden/8402541.js"></script>
   <p>This would compile into the following:</p>
   <script src="https://gist.github.com/jeffreylouden/8402555.js"></script>
