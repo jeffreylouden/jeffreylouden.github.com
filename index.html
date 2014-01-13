@@ -1,23 +1,5 @@
 ---
 layout: none
-extra_css: http://totes.awe-so.me.s3.amazonaws.com/css/sagan.css
 ---
 
-{% include header.html %}
-	<header role="banner">
-    	{% for post in site.posts limit:1 %}
-    	<hgroup>
-			<h1>{{ post.title }}</h1>
-    	</hgroup>
-		{{ post.intro }}
-    	{% endfor %}
-	</header>
-
-	<article role="main" id="main">
-		{% for post in site.posts limit:1 %}
-			{{ post.content }}
-		{% endfor %}
-	</article>
-{% include footer.html %}
-
-	
+<script>window.location = "http://jefflouden.com/sagan";</script>	

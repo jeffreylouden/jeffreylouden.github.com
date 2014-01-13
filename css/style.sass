@@ -346,7 +346,7 @@ nav
     h3
       text-transform: capitalize
   ul
-    .info &
+    .about &
       clear: both
       background: white
       margin: $light-padding
@@ -436,7 +436,7 @@ footer
         cite
           margin: 0
 
-.info
+.about
   h1,
   h2
     text-align: center
@@ -540,10 +540,6 @@ footer
     top: 3px
 
 @media screen and (min-width: 40em)
-  .gh-btn
-    position: absolute
-    top: 20px
-    right: 20px
   code,
   .gist
     max-width: 70%
@@ -605,6 +601,10 @@ footer
       max-width: 70%
       display: block
       margin: 0 auto 1em
+    .gh-btn
+      position: absolute
+      top: 20px
+      right: 20px
   #main
     section
       position: relative
@@ -640,7 +640,7 @@ footer
           overflow: hidden
           white-space: nowrap
           text-overflow: ellipsis
-      .info &
+      .about &
         padding: $medium-padding
   #colophon
     max-width: 70%
@@ -740,7 +740,7 @@ footer
         +prefix("column-count", 2)
         +prefix("column-gap", "20px")
         +prefix("column-break-inside", "avoid-column")
-  .info
+  .about
     h1,
     h2
       text-align: left
@@ -923,7 +923,7 @@ footer
     &:before
       background-image: url("../img/pattern-sprite@2x.png")
       background-size: 2400px 150px
-  .info
+  .about
     h1
       background-image: url("../img/jeff-logo-white@2x.png")
 
