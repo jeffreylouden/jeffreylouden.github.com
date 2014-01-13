@@ -1,5 +1,6 @@
 ---
 layout: none
+extra_css: http://totes.awe-so.me.s3.amazonaws.com/css/sagan.css
 ---
 
 {% include header.html %}
@@ -8,7 +9,7 @@ layout: none
     	<hgroup>
 			<h1>{{ post.title }}</h1>
     	</hgroup>
-		<p>{{ post.intro }}</p>
+		{{ post.intro }}
     	{% endfor %}
 	</header>
 

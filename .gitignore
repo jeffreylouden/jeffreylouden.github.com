@@ -20,7 +20,7 @@ node_modules/
 # Ignore Bower modules
 bower_components/
 
-dist/
+*dist/*
 _site/
 .sass-cache/
 css/*.css
