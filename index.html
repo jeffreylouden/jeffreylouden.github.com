@@ -1,7 +1,23 @@
 ---
 layout: none
+extra_css: css/sagan.css
 ---
 
-<script>window.location = window.location.origin + "/sagan";</script>
+{% include header.html %}
+	<header role="banner">
+    	{% for post in site.posts limit:1 %}
+    	<hgroup>
+			<h1>{{ post.title }}</h1>
+    	</hgroup>
+		{{ post.intro }}
+    	{% endfor %}
+	</header>
+
+	<article role="main" id="main">
+		{% for post in site.posts limit:1 %}
+			{{ post.content }}
+		{% endfor %}
+	</article>
+{% include footer.html %}
 
 	
