@@ -47,6 +47,7 @@ module.exports = function(grunt) {
             my_target: {
                 files: {
                     '<%= js %>/core.min.js': ['bower_components/unveil/jquery.unveil.min.js', 'js/core.js'],
+                    '<%= js %>/nest.min.js': 'js/core.js',
                 },
                 options: {
                     banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
