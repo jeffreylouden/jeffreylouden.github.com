@@ -11,7 +11,7 @@
 					<li><a href="http://www.rdio.com/people/jeffreylouden/" title="Rdio"><i class="icon-music"></i>Rdio</a></li>
 					<li><a href="http://instagram.com/jeffreylouden" title="Instagram"><i class="icon-camera-retro"></i>Instagram</a></li>
 					<li><a href="http://www.linkedin.com/profile/view?id=53389570" title="LinkedIn"><i class="icon-linkedin"></i>LinkedIn</a></li>
-					<li><a href="http://jefflouden.com/resume.pdf" title="Resume"><i class="icon-file-alt"></i>Resume</a></li>
+					<!-- <li><a href="http://jefflouden.com/resume.pdf" title="Resume"><i class="icon-file-alt"></i>Resume</a></li> -->
 				</ul>
 			</div>
 		</div>
@@ -24,5 +24,7 @@
 	<div id="party-mode"><b></b></div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script async src="http://totes.awe-so.me.s3.amazonaws.com/js/core.min.js"></script>
+	{% if page.extra_js %}<script src="{{ page.extra_js }}"></script>{% endif %}
+	<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-21427100-1']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s)})();</script>
 </body>
 </html>

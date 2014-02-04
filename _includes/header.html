@@ -1,7 +1,5 @@
 <!doctype html>
-<!--[if IE 7]> <html class="no-js oldie ie8 ie7" lang="en"> <![endif]-->
-<!--[if IE 8]> <html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Article"> <!--<![endif]-->
+<html lang="en" itemscope itemtype="http://schema.org/Article">
 <head>
   {% capture relative_path %}{{ page.url | slugify | remove:'index.html' | remove:'.html' | replace:'404','' | replace:'/','' }}{% endcapture %}
   {% capture relative_title %}{{ page.title | capitalize | remove:'index.html' | remove:'.html' | replace:'404' | replace:'/','' | prepend:' | ' }}{% endcapture %}
@@ -18,12 +16,11 @@
   <link type="text/plain" rel="author" href="{{ site.url }}humans.txt">
   <link rel="alternate" type="application/atom+xml" href="{{ site.url }}feed.xml" />
   
-  <link rel="stylesheet" href="http://totes.awe-so.me.s3.amazonaws.com/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   {% if page.extra_css %}<link rel="stylesheet" href="{{ page.extra_css }}">{% endif %}
 
   <script type="text/javascript" src="http://use.typekit.com/xws0ysl.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <script src="http://totes.awe-so.me/js/modernizr-2.5.2.min.js"></script>
   
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:title" content="{% if page.title %}{{ page.title | strip_html }}{% else %}Jeffrey Louden{% endif %}">
@@ -43,7 +40,6 @@
   <meta name="twitter:url" content="{{ site.url }}{{ relative_path }}">
   <meta name="twitter:image" content="{% if page.og.image %}{{ page.og.image }}{% else %}{{ site.url }}img/fb-thumb.jpg{% endif %}">
 
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="HandheldFriendly" content="true" />
 
@@ -55,8 +51,6 @@
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://totes.awe-so.me/apple-touch-icon-144x144-precomposed.png">
 
   <link rel="shortcut icon" href="http://totes.awe-so.me/favicon.ico" />
-
-  <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-21427100-1']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s)})();</script>
   
 </head>
 <body class="{{ relative_path }}">
