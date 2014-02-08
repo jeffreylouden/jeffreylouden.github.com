@@ -94,7 +94,7 @@
                     modal.removeClass(SHOW).addClass(HIDE);
 
                     setTimeout(function() {
-                        modalContent.remove();
+                        document.getElementById('modal').innerHTML = "";
                     }, 200);
                 }
             }
