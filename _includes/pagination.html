@@ -1,0 +1,8 @@
+<nav id="pagination"> 
+    {% if page.previous.url %} 
+        <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.nav_title}}" id="previous-post"><i class="icon-angle-left"></i><span>{{page.previous.nav_title}}</span></a> 
+    {% endif %}
+    {% if page.next.url %}
+        <a href="{{page.next.url}}" title="next Post: {{page.next.nav_title}}" id="next-post"><span>{{page.next.nav_title}}</span><i class="icon-angle-right"></i></a> 
+    {% endif %}
+</nav>
