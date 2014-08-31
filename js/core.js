@@ -2,7 +2,8 @@
     "use strict";
 
     var
-        speeds = ['fast', 'medium', 'slow']
+        speeds = ['fast', 'medium', 'slow'],
+        color = ['steelblue', '#AAA6AC'];
         
 
     function getRandomInt(min, max) {
@@ -21,7 +22,7 @@
                 t = getRandomInt(0, window.innerHeight),
                 l = getRandomInt(0, window.innerWidth);
 
-            b.setAttribute('style', "position:absolute;width:1px;height:1px;top:"+t+"px;left:"+l+"px;");
+            b.setAttribute('style', "position:absolute;width:1px;height:1px;top:"+t+"px;left:"+l+"px;background-color:"+color[getRandomInt(0, 1)]+";");
             b.setAttribute('class', speeds[getRandomInt(0, 2)]);
 
             fragment.appendChild( b );
