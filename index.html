@@ -1,8 +1,10 @@
 ---
-layout: none
+layout: base
 ---
 
-{% for post in site.posts limit:1 %}
-{% capture relative_path %}{{ post.url | slugify | remove:'index.html' | remove:'.html' | replace:'404','' | replace:'/','' }}{% endcapture %}
-<script>window.location = "{{ site.url}}{{ relative_path }}";</script>
-{% endfor %}
+<section id="main">
+<section id="earth">
+	<figure id="planet"></figure>
+	<aside id="moon"></aside>
+</section>
+</section>
