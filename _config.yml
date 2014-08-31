@@ -8,3 +8,6 @@ topic_list:     ["articles"]
 name:           "Jeffrey Louden"
 
 excerpt_separator: ""
+
+sass:
+    style: :compressed
