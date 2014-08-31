@@ -8,6 +8,16 @@
 @import "reset";
 
 @-webkit-keyframes orbit {
+  from { -webkit-transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@-moz-keyframes orbit {
+  from { -moz-transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  to   { -moz-transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@keyframes orbit {
   from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
   to   { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
 }
@@ -19,16 +29,6 @@
 }
 
 @-moz-keyframes slideLeft {
-  from { background-position-x: 0; }
-  to { background-position-x: 189px; }
-}
-
-@-o-keyframes slideLeft {
-  from { background-position-x: 0; }
-  to { background-position-x: 189px; }
-}
-
-@-ms-keyframes slideLeft {
   from { background-position-x: 0; }
   to { background-position-x: 189px; }
 }
@@ -46,18 +46,6 @@
 }
 
 @-moz-keyframes pulse {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@-o-keyframes pulse {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@-ms-keyframes pulse {
   0% { opacity: 0; }
   50% { opacity: 1; }
   100% { opacity: 0; }
