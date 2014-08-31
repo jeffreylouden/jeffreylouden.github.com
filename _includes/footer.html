@@ -1,30 +1,7 @@
-	{% capture relative_path %}{{ page.url | slugify | remove:'index.html' | remove:'.html' | replace:'404','four-oh-four' | replace:'/','' }}{% endcapture %}
 	<footer>
-		<div id="colophon">
-			<div id="thanks">
-				<p>I'm a front-end developer who has had the privilege to work for some incredible companies like <a href="http://www.apple.com" title="Apple">Apple</a>, <a href="http://www.barackobama.com" title="Obama For America">Obama For America</a>, <a href="http://www.newyorker.com" title="The New Yorker">The New Yorker</a>, <a href="http://www.nest.com" title="Nest Labs">Nest Labs</a>, and <a href="http://www.google.com" title="Google">Google</a>. I studied computer stuff and music at <a href="http://www.fsu.edu" title="Florida State University">Florida State University</a> and <a href="http://www.berklee.edu/" title="Berklee College of Music">Berklee</a>. I live in beautiful San Francisco, California.
-			</div>
-			<div id="contact">
-				<ul>
-					<li><a href="https://www.github.com/jeffreylouden" title="GitHub"><i class="icon-github"></i>Github</a></li>
-					<li><a href="https://twitter.com/jeffreylouden" title="Twitter"><i class="icon-twitter"></i>Twitter</a></li>
-					<li><a href="http://www.rdio.com/people/jeffreylouden/" title="Rdio"><i class="icon-music"></i>Rdio</a></li>
-					<li><a href="http://instagram.com/jeffreylouden" title="Instagram"><i class="icon-camera-retro"></i>Instagram</a></li>
-					<li><a href="http://www.linkedin.com/profile/view?id=53389570" title="LinkedIn"><i class="icon-linkedin"></i>LinkedIn</a></li>
-					<!-- <li><a href="http://jefflouden.com/resume.pdf" title="Resume"><i class="icon-file-alt"></i>Resume</a></li> -->
-				</ul>
-			</div>
-		</div>
-		<div id="credits">
-			<a href="http://www.zachstubenvoll.com" title="Zach Stubenvoll">Zach Stubenvoll is Awful</a>
-			<p id="legal">© Copyright Jeffrey Louden 2012-2013. Powered by <a href="https://github.com/" title="Github">Github</a>, <a href="https://github.com/mojombo/jekyll" title="Jekyll on Github">Jekyll</a>, <a href="http://www.typekit.com/" title="Typekit">Typekit</a>, and <a href="http://fortawesome.github.com/Font-Awesome/" title="Font Awesome">Font Awesome</a>.</p>
-			<i></i>
-		</div>
+		<p id="legal">&copy; Copyright Jeffrey Louden 2012-2014. <a href="https://twitter.com/jeffreylouden">{{ site.data.meta.twitter_handle }}</a></p>
 	</footer>
-	<div id="party-mode"><b></b></div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script async src="http://totes.awe-so.me.s3.amazonaws.com/js/core.min.js"></script>
-	{% if page.extra_js %}<script src="{{ page.extra_js }}"></script>{% endif %}
+	<script async src="js/core.js"></script>
 	<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-21427100-1']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s)})();</script>
 </body>
 </html>
