@@ -1,210 +1,138 @@
----
----
-
-@import "vendor/sagan/mixins";
-@import "vendor/sagan/grid";
-
-@import "variables";
-@import "reset";
-
-@-webkit-keyframes orbit {
-  from { -webkit-transform: rotate(0deg) translateX(100px) rotate(0deg); }
-  to   { -webkit-transform: rotate(360deg) translateX(100px) rotate(-360deg); }
-}
-
-@-moz-keyframes orbit {
-  from { -moz-transform: rotate(0deg) translateX(100px) rotate(0deg); }
-  to   { -moz-transform: rotate(360deg) translateX(100px) rotate(-360deg); }
-}
-
-@keyframes orbit {
-  from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
-  to   { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
-}
-
-
-@-webkit-keyframes slideLeft {
-  from { background-position-x: 0; }
-  to { background-position-x: 189px; }
-}
-
-@-moz-keyframes slideLeft {
-  from { background-position-x: 0; }
-  to { background-position-x: 189px; }
-}
-
-@keyframes slideLeft {
-  from { background-position-x: 0; }
-  to { background-position-x: 189px; }
-}
-
-
-@-webkit-keyframes pulse {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@-moz-keyframes pulse {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@keyframes pulse {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
+@import "../_sass/vendor/sagan/mixins";
+@import "../_sass/vendor/sagan/grid";
+@import "../_sass/variables";
+@import "../_sass/reset";
 
 body, html {
-  margin: 0 10px;
+  margin: 0;
   padding: 0;
   height: 100%;
   min-height: 100%;
-  overflow: hidden;
   &::selection,
   &::-moz-selection {
     background:#ff0;
   }
 }
 
-
 body {
+  position: relative;
+  border-top: 6px solid #2D2D2D;
+  padding: 30px 4% 4%;
   font-size: 62.5%;
   font-family: $proxima;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  background-color: darken(#36333D, 10%);
-  color: #AAA6AC;
-}
-
-b {
-  &.fast {
-    -webkit-animation: pulse 5s cubic-bezier(0.05, 0.2, 0.5, 1) infinite;
-    -moz-animation: pulse 5s cubic-bezier(0.05, 0.2, 0.5, 1) infinite;
-    animation: pulse 5s cubic-bezier(0.05, 0.2, 0.5, 1) infinite;
+  background-color: white;
+  color: #2D2D2D;
+  &:before {
+    content: '';
+    height: 1px;
+    background: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1px;
   }
-  &.medium {
-    -webkit-animation: pulse 6.2s cubic-bezier(0.05, 0.2, 0.5, 1) infinite;
-    -moz-animation: pulse 6.2s cubic-bezier(0.05, 0.2, 0.5, 1) infinite;
-    animation: pulse 6.2s cubic-bezier(0.05, 0.2, 0.5, 1) infinite;
+  &:after {
+    content: '';
+    height: 1px;
+    background: #aaa;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5px;
   }
-  &.slow {
-    -webkit-animation: pulse 7.7s cubic-bezier(0.05, 0.2, 0.5, 1) infinite;
-    -moz-animation: pulse 7.7s cubic-bezier(0.05, 0.2, 0.5, 1) infinite;
-    animation: pulse 7.7s cubic-bezier(0.05, 0.2, 0.5, 1) infinite;
-  }
-  margin: 0;
-}
 
-#earth {
-  position: absolute;
-  top: 50%;
-  margin-top: -50px;
-  left: 50%;
-  margin-left: -50px;
-  background: radial-gradient(circle at 100px 100px, darken(#36333D, 6%), darken(#36333D, 10%));
-  height: 102px;
-  width: 102px;
-  border-radius: 50%;
-  padding: 0;
-}
-
-#planet {
-  border: 1px solid darken(#AAA6AC, 8%);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background: url('../img/map.png') top center repeat-x;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  background-size: cover;
-  -webkit-animation: slideLeft 12.6s linear infinite;
-  -moz-animation: slideLeft 12.6s linear infinite;
-  animation: slideLeft 12.6s linear infinite;
-  z-index: 5;
-}
-
-#moon {
-  border: 1px solid darken(#AAA6AC, 16%);
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  margin-top: -9px;
-  left: 50%;
-  margin-left: -9px;
-  z-index: 4;
-
-  background: radial-gradient(circle at 18px 18px, darken(#AAA6AC, 4%), darken(#AAA6AC, 12%));
-
-  -webkit-animation: orbit 3.44232s linear infinite;
-  -moz-animation: orbit 3.44232s linear infinite;
-  animation: orbit 3.44232s linear infinite;
-}
-
-section, footer {
-  display: block;
-  z-index: 1;
-  position: relative;
-  margin: 10px auto;
-  padding: 10px;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-section {
-  max-width: 600px;
-  p {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    margin: 40px 0 20px;
-  }
-}
-
-#main {
-  position: relative;
-  height: 100%;
-}
-
-footer {
-  max-width: 300px;
-  font-size: 0.6rem;
-  line-height: 1rem;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -10px;
-  padding: 10px;
   a {
     color: inherit;
   }
 }
 
 h1 {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  letter-spacing: 0.075rem;
+  font-family: $leitura;
+  font-size: 2rem;
+}
+
+section, footer {
+  display: block;
+  z-index: 1;
   position: relative;
-  margin-bottom: 20px;
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 50%;
-    margin-left: -40px;
-    height: 2px;
-    background: #AAA6AC;
-    bottom: -14px;
-    width: 80px;
+  box-sizing: border-box;
+}
+
+#main {
+  position: relative;
+  margin: 30px auto;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  p {
+    margin-bottom: 15px;
   }
 }
 
-@include respond-to(600px) {
-  
+#social {
+  margin: 15px 0 30px;
+  li {
+    margin-bottom: 7px;
+  }
+  a {
+    font-family: $leitura;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      span {
+        color: #2D2D2D;
+      }
+    }
+    span {
+      color: #999;
+    }
+  }
+}
 
+footer {
+  font-family: $leitura;
+  font-size: 0.6rem;
+  line-height: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    padding: 0 0 0 4%;
+    border-top: none;
+    border-left: 6px solid black;
+    &:before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background: black;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 1px;
+      right: auto;
+    }
+    &:after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background: #aaa;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 5px;
+      right: auto;
+    }
+  }
+  header {
+    padding-top: 60px;
+  }
+  #main {
+    margin: 2% 0;
+    max-width: 600px;
+  }
+  #social {
+    margin-bottom: 2%;
+  }
 }
