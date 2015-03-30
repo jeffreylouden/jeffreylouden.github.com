@@ -1,3 +1,48 @@
+@-webkit-keyframes vertical-anim{
+  $steps:30;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      background: rgb(random(255), random(255), random(255));
+      opacity: random(30)/100;
+      left: random(1000)+px;
+    }
+  }
+}
+
+@keyframes vertical-anim{
+  $steps:30;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      background: rgb(random(255), random(255), random(255));
+      opacity: random(30)/100;
+      left: random(1000)+px;
+    }
+  }
+}
+
+@-webkit-keyframes vertical-anim-2 {
+  $steps:30;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      background: rgb(random(255), random(255), random(255));
+      opacity: random(30)/100;
+      left: random(1000)+px;
+    }
+  }
+}
+
+@keyframes vertical-anim-2 {
+  $steps:30;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      background: rgb(random(255), random(255), random(255));
+      opacity: random(30)/100;
+      left: random(1000)+px;
+    }
+  }
+}
+
+
 @-webkit-keyframes noise-anim{
   $steps:8;
   @for $i from 0 through $steps{
@@ -204,11 +249,6 @@ footer {
 }
 
 
-
-
-
-
-
 .glitch{
   position:relative;
 }
@@ -240,4 +280,25 @@ footer {
   clip:rect(0,900px,0,0);
   -webkit-animation:noise-anim-2 4s infinite linear alternate-reverse;
   animation:noise-anim-2 4s infinite linear alternate-reverse;
+}
+
+.noise,
+.noise-dupe {
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow:hidden;
+}
+
+.noise {
+  -webkit-animation:vertical-anim 120s infinite ease-out alternate;
+  animation:vertical-anim 120s infinite ease-out alternate;
+}
+
+.noise-dupe {
+  -webkit-animation:vertical-anim-2 120s infinite ease-out alternate;
+  animation:vertical-anim-2 120s infinite ease-out alternate;
 }
