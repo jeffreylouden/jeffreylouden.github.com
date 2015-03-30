@@ -223,7 +223,6 @@ footer {
 }
 
 // 404
-
 .four-oh-four {
   background: url('../img/tv.gif') 50% 50% no-repeat;
   background-size: cover;
@@ -251,64 +250,60 @@ footer {
   footer {
     display: none;
   }
-  .glitch:after,
-  .glitch:before {
-    color: rgba(255,255,255,0.2);
-    background: rgba(0,0,0,0.2);
+  .glitch {
+    &:after,
+    &:before {
+      color: rgba(255,255,255,0.2);
+      background: rgba(0,0,0,0.2);
+    }
   }
 }
 
-
 .glitch{
   position:relative;
-}
+  &:after,
+  &:before {
+    content:attr(data-text);
+    position:absolute;
+    top:0;
+    color: #2D2D2D;
+    background: white;
+    overflow:hidden;
+    clip:rect(0,900px,0,0);
+  }
+  &:after{
+    left:2px;
+    text-shadow:-1px 0 #999;
+    -webkit-animation:noise-anim 4s infinite linear alternate-reverse;
+    animation:noise-anim 4s infinite linear alternate-reverse;
+  }
 
-.glitch:after{
-  content:attr(data-text);
-  position:absolute;
-  left:2px;
-  text-shadow:-1px 0 #999;
-  top:0;
-  color: #2D2D2D;
-  background: white;
-  overflow:hidden;
-  clip:rect(0,900px,0,0); 
-  -webkit-animation:noise-anim 4s infinite linear alternate-reverse;
-  animation:noise-anim 4s infinite linear alternate-reverse;
-}
-
-
-.glitch:before{
-  content:attr(data-text);
-  position:absolute;
-  left:-2px;
-  text-shadow:1px 0 #ccc; 
-  top:0;
-  color: #2D2D2D;
-  background: white;
-  overflow:hidden;
-  clip:rect(0,900px,0,0);
-  -webkit-animation:noise-anim-2 4s infinite linear alternate-reverse;
-  animation:noise-anim-2 4s infinite linear alternate-reverse;
-}
-
-.noise,
-.noise-dupe {
-  width: 1px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  overflow:hidden;
+  &:before{
+    left:-2px;
+    text-shadow:1px 0 #ccc; 
+    -webkit-animation:noise-anim-2 4s infinite linear alternate-reverse;
+    animation:noise-anim-2 4s infinite linear alternate-reverse;
+  }
 }
 
 .noise {
-  -webkit-animation:vertical-anim 120s infinite ease-out alternate;
-  animation:vertical-anim 120s infinite ease-out alternate;
-}
-
-.noise-dupe {
-  -webkit-animation:vertical-anim-2 120s infinite ease-out alternate;
-  animation:vertical-anim-2 120s infinite ease-out alternate;
+  &:before,
+  &:after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow:hidden;
+  }
+  &:before {
+    -webkit-animation:vertical-anim 120s infinite ease-out alternate;
+    animation:vertical-anim 120s infinite ease-out alternate;
+  }
+  &:after {
+    -webkit-animation:vertical-anim-2 120s infinite ease-out alternate;
+    animation:vertical-anim-2 120s infinite ease-out alternate;
+  }
 }
