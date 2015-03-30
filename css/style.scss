@@ -234,23 +234,17 @@ footer {
   }
 
   h1 {
-    display: none;
     font-size: 0.75rem;
     text-align: center;
     font-family: $proxima;
     font-weight: 700;
     text-transform: uppercase;
     color: white;
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    opacity: 0.3;
-    width: 190px;
-    margin-left: -57px;
-    @media screen and (min-width: 500px) {
-      display: block;
-    }
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
     a {
+      opacity: 0.2;
       text-decoration: none;
     }
   }
@@ -259,8 +253,8 @@ footer {
   }
   .glitch:after,
   .glitch:before {
-    color: black;
-    background: transparent;
+    color: rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.2);
   }
 }
 
