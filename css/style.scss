@@ -232,19 +232,35 @@ footer {
   &:after {
     display: none;
   }
+
   h1 {
+    display: none;
     font-size: 0.75rem;
     text-align: center;
     font-family: $proxima;
     font-weight: 700;
     text-transform: uppercase;
     color: white;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    opacity: 0.3;
+    width: 190px;
+    margin-left: -57px;
+    @media screen and (min-width: 500px) {
+      display: block;
+    }
     a {
       text-decoration: none;
     }
   }
   footer {
     display: none;
+  }
+  .glitch:after,
+  .glitch:before {
+    color: black;
+    background: transparent;
   }
 }
 
