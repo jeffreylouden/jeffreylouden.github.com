@@ -4,7 +4,7 @@
     #{percentage($i*(1/$steps))}{
       background: rgb(random(255), random(255), random(255));
       opacity: random(30)/100;
-      left: random(1000)+px;
+      left: percentage(random(100)/100);
     }
   }
 }
@@ -15,7 +15,7 @@
     #{percentage($i*(1/$steps))}{
       background: rgb(random(255), random(255), random(255));
       opacity: random(30)/100;
-      left: random(1000)+px;
+      left: percentage(random(100)/100);
     }
   }
 }
