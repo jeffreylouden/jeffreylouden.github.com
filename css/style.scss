@@ -140,3 +140,29 @@ footer {
     margin-bottom: 2%;
   }
 }
+
+// 404
+
+.four-oh-four {
+  background: url('../img/tv.gif') 50% 50% no-repeat;
+  background-size: cover;
+  border: none;
+  &:before,
+  &:after {
+    display: none;
+  }
+  h1 {
+    font-size: 0.75rem;
+    text-align: center;
+    font-family: $proxima;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    a {
+      text-decoration: none;
+    }
+  }
+  footer {
+    display: none;
+  }
+}
