@@ -100,7 +100,7 @@ body {
   border-top: 6px solid #2D2D2D;
   padding: 30px 4% 4%;
   font-size: 62.5%;
-  font-family: $proxima;
+  font-family: $leitura;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   background-color: white;
@@ -132,13 +132,9 @@ body {
   }
 }
 
-.leitura {
-  font-family: $leitura;
-}
-
 h1 {
-  font-family: $leitura;
-  font-size: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 section, footer {
@@ -275,17 +271,17 @@ footer {
     clip:rect(0,900px,0,0);
   }
   &:after{
-    left:2px;
-    text-shadow:-1px 0 #999;
-    -webkit-animation:noise-anim 4s infinite linear alternate-reverse;
-    animation:noise-anim 4s infinite linear alternate-reverse;
+    left:1px;
+    text-shadow:-1px 0 #fff;
+    -webkit-animation:noise-anim 9s infinite linear alternate-reverse;
+    animation:noise-anim 9s infinite linear alternate-reverse;
   }
 
   &:before{
-    left:-2px;
-    text-shadow:1px 0 #ccc; 
-    -webkit-animation:noise-anim-2 4s infinite linear alternate-reverse;
-    animation:noise-anim-2 4s infinite linear alternate-reverse;
+    left:-1px;
+    text-shadow:1px 0 #fff; 
+    -webkit-animation:noise-anim-2 10s infinite linear alternate-reverse;
+    animation:noise-anim-2 10s infinite linear alternate-reverse;
   }
 }
 
