@@ -105,6 +105,9 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: white;
   color: #2D2D2D;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
   &:before {
     content: '';
     height: 1px;
