@@ -1,47 +1,25 @@
-@-webkit-keyframes vertical-anim{
-  $steps:30;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      background: rgb(random(255), random(255), random(255));
-      opacity: random(30)/100;
-      left: percentage(random(100)/100);
+$verticals:2;
+@for $v from 1 through $verticals{
+  @-webkit-keyframes vertical-anim-#{$v}{
+    $steps:30;
+    @for $i from 0 through $steps{
+      #{percentage($i*(1/$steps))}{
+        background: rgb(random(255), random(255), random(255));
+        left: percentage(random(100)/100);
+      }
+    }
+  }
+
+  @keyframes vertical-anim-#{$v}{
+    $steps:30;
+    @for $i from 0 through $steps{
+      #{percentage($i*(1/$steps))}{
+        background: rgb(random(255), random(255), random(255));
+        left: percentage(random(100)/100);
+      }
     }
   }
 }
-
-@keyframes vertical-anim{
-  $steps:30;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      background: rgb(random(255), random(255), random(255));
-      opacity: random(30)/100;
-      left: percentage(random(100)/100);
-    }
-  }
-}
-
-@-webkit-keyframes vertical-anim-2 {
-  $steps:30;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      background: rgb(random(255), random(255), random(255));
-      opacity: random(30)/100;
-      left: random(1000)+px;
-    }
-  }
-}
-
-@keyframes vertical-anim-2 {
-  $steps:30;
-  @for $i from 0 through $steps{
-    #{percentage($i*(1/$steps))}{
-      background: rgb(random(255), random(255), random(255));
-      opacity: random(30)/100;
-      left: random(1000)+px;
-    }
-  }
-}
-
 
 @-webkit-keyframes noise-anim{
   $steps:8;
@@ -296,10 +274,11 @@ footer {
     bottom: 0;
     left: 0;
     overflow:hidden;
+    opacity: 0.5;
   }
   &:before {
-    -webkit-animation:vertical-anim 120s infinite ease-out alternate;
-    animation:vertical-anim 120s infinite ease-out alternate;
+    -webkit-animation:vertical-anim-1 120s infinite ease-out alternate;
+    animation:vertical-anim-1 120s infinite ease-out alternate;
   }
   &:after {
     -webkit-animation:vertical-anim-2 120s infinite ease-out alternate;
