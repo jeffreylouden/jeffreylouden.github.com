@@ -1,48 +1,44 @@
 (function( win, doc ) {
     "use strict";
-
-    var
-        speeds = ['fast', 'medium', 'slow'],
-        color = ['steelblue', '#AAA6AC'];
         
-
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    function createStars(min, max) {
+    function createLines() {
         var
-            starCount = getRandomInt(min, max),
-            starContainer = doc.createElement("div"),
+            lineContainer = doc.createElement("div"),
             fragment = doc.createDocumentFragment();
 
-        for ( var e = 0; e < starCount; e++ ) {
+        lineContainer.setAttribute('class', 'lines');
+
+        for ( var e = 0; e < window.innerHeight; e++ ) {
+            if (e % 2 === 1) { continue; }
+            console.log(e)
             var
                 b = doc.createElement("b"),
                 t = getRandomInt(0, window.innerHeight),
                 l = getRandomInt(0, window.innerWidth);
 
-            b.setAttribute('style', "position:absolute;width:1px;height:1px;top:"+t+"px;left:"+l+"px;background-color:"+color[getRandomInt(0, 1)]+";");
-            b.setAttribute('class', speeds[getRandomInt(0, 2)]);
+            b.setAttribute('style', "position:absolute;width:"+l+"px;height:1px;top:"+e+"px;left:0;background-color:#"+("000"+(Math.random()*(1<<24)|0).toString(16)).substr(-6)+";");
 
             fragment.appendChild( b );
         }
 
-        starContainer.appendChild( fragment.cloneNode(true) )
+        lineContainer.appendChild( fragment.cloneNode(true) )
          
-        doc.body.appendChild( starContainer.cloneNode(true) );
-        
+        doc.body.appendChild( lineContainer.cloneNode(true) );
     }
 
     window.addEventListener("resize", function() {
         if (doc.getElementsByTagName('div')) {
             doc.body.removeChild(doc.getElementsByTagName('div')[0])
         }
-        createStars(500, 1000);
+        createLines();
     });
 
     window.onload = function() {
-        createStars(500, 1000);
+        createLines();
     };
 
 })(window, document);
