@@ -4,7 +4,6 @@ $verticals:2;
     $steps:30;
     @for $i from 0 through $steps{
       #{percentage($i*(1/$steps))}{
-        background: rgb(random(255), random(255), random(255));
         top: percentage(random(100)/100);
       }
     }
@@ -14,11 +13,30 @@ $verticals:2;
     $steps:30;
     @for $i from 0 through $steps{
       #{percentage($i*(1/$steps))}{
-        background: rgb(random(255), random(255), random(255));
         top: percentage(random(100)/100);
       }
     }
   }
+}
+
+@-webkit-keyframes vertical-anim {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+@keyframes vertical-anim {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+@-webkit-keyframes vertical-anim-reverse {
+  0% { top: 100%; }
+  100% { top: 0; }
+}
+
+@keyframes vertical-anim-reverse {
+  0% { top: 100%; }
+  100% { top: 0; }
 }
 
 @-webkit-keyframes noise-anim{
@@ -146,7 +164,6 @@ header,
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.3;
 }
 
 #social {
@@ -295,15 +312,15 @@ footer {
     bottom: 0;
     left: 0;
     overflow:hidden;
-    opacity: 0.5;
     z-index: 998;
+    background: #999;
   }
   &:before {
-    -webkit-animation:vertical-anim-1 120s infinite ease-out alternate;
-    animation:vertical-anim-1 120s infinite ease-out alternate;
+    -webkit-animation:vertical-anim 10s infinite linear alternate;
+    animation:vertical-anim 10s infinite linear alternate;
   }
   &:after {
-    -webkit-animation:vertical-anim-2 120s infinite ease-out alternate;
-    animation:vertical-anim-2 120s infinite ease-out alternate;
+    -webkit-animation:vertical-anim-reverse 10s infinite linear alternate;
+    animation:vertical-anim-reverse 10s infinite linear alternate;
   }
 }

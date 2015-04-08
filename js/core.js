@@ -20,7 +20,7 @@
                 t = getRandomInt(0, window.innerHeight),
                 l = getRandomInt(0, window.innerWidth);
 
-            b.setAttribute('style', "position:absolute;width:"+l+"px;height:1px;top:"+e+"px;left:0;background-color:#"+("000"+(Math.random()*(1<<24)|0).toString(16)).substr(-6)+";");
+            b.setAttribute('style', "position:absolute;width:"+l+"px;height:1px;top:"+e+"px;right:0;background-color:#B3B3B3;");
 
             fragment.appendChild( b );
         }
