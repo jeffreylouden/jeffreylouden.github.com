@@ -65,8 +65,6 @@ $verticals:2;
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
-  min-height: 100%;
   &::selection,
   &::-moz-selection {
     background:#ff0;
@@ -84,7 +82,7 @@ body {
   background-color: white;
   color: #2D2D2D;
   width: 100%;
-  overflow: hidden;
+  overflow: scroll;
   box-sizing: border-box;
   &:before {
     content: '';
