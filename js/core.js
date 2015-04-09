@@ -6,33 +6,26 @@
     }
 
     function createLines() {
-        var
-            lineContainer = doc.createElement("div"),
-            fragment = doc.createDocumentFragment();
-
-        lineContainer.setAttribute('class', 'lines');
+        var canvas = document.getElementById('lines');
+        var context = canvas.getContext('2d');
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
 
         for ( var e = 0; e < window.innerHeight; e++ ) {
             if (e % 2 === 1) { continue; }
-            var
-                b = doc.createElement("b"),
-                t = getRandomInt(0, window.innerHeight),
+            var 
+                topOffset = e + .5, // to create single pixel line
                 l = getRandomInt(0, window.innerWidth);
-
-            b.setAttribute('style', "position:absolute;width:"+l+"px;height:1px;top:"+e+"px;right:0;background-color:#B3B3B3;");
-
-            fragment.appendChild( b );
+            context.beginPath();
+            context.moveTo(l, topOffset);
+            context.lineTo(canvas.width, topOffset);
+            context.strokeStyle = '#B3B3B3';
+            context.lineWidth = 1;
+            context.stroke();
         }
-
-        lineContainer.appendChild( fragment.cloneNode(true) )
-         
-        doc.body.appendChild( lineContainer.cloneNode(true) );
     }
 
     window.addEventListener("resize", function() {
-        if (doc.getElementsByTagName('div')) {
-            doc.body.removeChild(doc.getElementsByTagName('div')[0])
-        }
         createLines();
     });
 
