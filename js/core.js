@@ -14,7 +14,6 @@
 
         for ( var e = 0; e < window.innerHeight; e++ ) {
             if (e % 2 === 1) { continue; }
-            console.log(e)
             var
                 b = doc.createElement("b"),
                 t = getRandomInt(0, window.innerHeight),
