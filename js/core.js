@@ -2,15 +2,14 @@
     "use strict";
 
     var mouse = {x: 0, y: 0};
-
     var canvas = document.getElementById('lines');
-    var context = canvas.getContext('2d');
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     function createLines(x,y) {
+        var context = canvas.getContext('2d');
         canvas.height = window.innerHeight;
         canvas.width = window.innerWidth;
         x = x || 0;
@@ -30,16 +29,19 @@
     }
 
     window.addEventListener("resize", function() {
+        if (!canvas) { return; }
         createLines();
     });
 
     window.onload = function() {
+        if (!canvas) { return; }
         createLines();
     };
 
     document.addEventListener('mousemove', function(e){ 
         mouse.x = e.clientX || e.pageX; 
-        mouse.y = e.clientY || e.pageY 
+        mouse.y = e.clientY || e.pageY;
+        if (!canvas) { return; }
         createLines(mouse.x,mouse.y);
     }, false);
 
