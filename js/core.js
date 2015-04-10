@@ -7,18 +7,19 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    function createLines(x,y) {
+    function createLines() {
         if (!canvas) { return; }
 
-        var context = canvas.getContext('2d');
+        var
+            context = canvas.getContext('2d'),
+            x = getRandomInt(0, window.innerWidth),
+            y = getRandomInt(0, window.innerHeight);
+
         context.clearRect ( 0 , 0 , canvas.width, canvas.height );
         
         canvas.height = window.innerHeight;
         canvas.width = window.innerWidth;
         
-        x = x || 0;
-        y = y || 0;
-
         for ( var e = 0, len = (canvas.width/100); e < len; e++ ) {
             var 
                 randomWidth = getRandomInt(0, window.innerWidth),
@@ -41,9 +42,5 @@
     window.onload = function() {
         createLines();
     };
-
-    document.addEventListener('mousemove', function(e){ 
-        createLines((e.clientX || e.pageX),(e.clientY || e.pageY));
-    }, false);
 
 })(window, document);
