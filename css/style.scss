@@ -1,21 +1,45 @@
 @-webkit-keyframes vertical-anim {
-  0% { top: 0; }
-  100% { top: 100%; }
+  $steps:100;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      top: percentage(random(100)/100);
+      opacity: (random(2)-1);
+      height: random(4)+px;
+    }
+  }
 }
 
 @keyframes vertical-anim {
-  0% { top: 0; }
-  100% { top: 100%; }
+  $steps:100;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      top: percentage(random(100)/100);
+      opacity: (random(2)-1);
+      height: random(4)+px;
+    }
+  }
 }
 
 @-webkit-keyframes vertical-anim-reverse {
-  0% { top: 100%; }
-  100% { top: 0; }
+  $steps:100;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      top: percentage(random(100)/100);
+      opacity: (random(2)-1);
+      height: random(4)+px;
+    }
+  }
 }
 
 @keyframes vertical-anim-reverse {
-  0% { top: 100%; }
-  100% { top: 0; }
+  $steps:100;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      top: percentage(random(100)/100);
+      opacity: (random(2)-1);
+      height: random(4)+px;
+    }
+  }
 }
 
 @-webkit-keyframes noise-anim{
@@ -294,13 +318,11 @@ footer {
     background: white;
   }
   &:before {
-    height: 1px;
-    -webkit-animation:vertical-anim 10s infinite linear alternate;
-    animation:vertical-anim 10s infinite linear alternate;
+    -webkit-animation:vertical-anim 100s infinite linear;
+    animation:vertical-anim 100s infinite linear;
   }
   &:after {
-    height: 2px;
-    -webkit-animation:vertical-anim-reverse 10s infinite linear alternate;
-    animation:vertical-anim-reverse 10s infinite linear alternate;
+    -webkit-animation:vertical-anim-reverse 100s infinite linear;
+    animation:vertical-anim-reverse 100s infinite linear;
   }
 }

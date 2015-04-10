@@ -19,7 +19,7 @@
             context.beginPath();
             context.moveTo(l, topOffset);
             context.lineTo(canvas.width, topOffset);
-            context.strokeStyle = '#B3B3B3';
+            context.strokeStyle = "#"+("000"+(Math.random()*(1<<24)|0).toString(16)).substr(-6);
             context.lineWidth = 1;
             context.stroke();
         }
