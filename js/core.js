@@ -1,16 +1,17 @@
 (function( win, doc ) {
     "use strict";
+
+    var canvas = document.getElementById('lines');
+    var context = canvas.getContext('2d');
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
         
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     function createLines() {
-        var canvas = document.getElementById('lines');
-        var context = canvas.getContext('2d');
-        canvas.height = window.innerHeight;
-        canvas.width = window.innerWidth;
-
         for ( var e = 0; e < window.innerHeight; e++ ) {
             if (e % 2 === 1) { continue; }
             var 
