@@ -34,6 +34,16 @@
   }
 }
 
+@-webkit-keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @import "../_sass/vendor/sagan/mixins";
 @import "../_sass/vendor/sagan/grid";
 @import "../_sass/variables";
@@ -61,6 +71,8 @@ body {
   color: #2D2D2D;
   width: 100%;
   box-sizing: border-box;
+  -webkit-animation: fade-in 2s;
+  animation: fade-in 2s;
 
   a {
     color: inherit;
@@ -94,7 +106,6 @@ header,
   position: relative;
   z-index: 999;
 }
-
 
 #lines {
   position: fixed;
