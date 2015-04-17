@@ -17,9 +17,14 @@
 
         context.clearRect ( 0 , 0 , canvas.width, canvas.height );
         
-        canvas.height = window.innerHeight;
-        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight * 2;
+        canvas.width = window.innerWidth * 2;
+
+        canvas.style.height = window.innerHeight + 'px';
+        canvas.style.width = window.innerWidth + 'px';
         
+        context.scale(2,2);
+
         for ( var e = 0, len = (canvas.width/100); e < len; e++ ) {
             var 
                 randomWidth = getRandomInt(0, window.innerWidth),
