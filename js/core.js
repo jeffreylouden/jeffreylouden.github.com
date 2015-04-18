@@ -11,24 +11,26 @@
         if (!canvas) { return; }
 
         var
+            winHeight = window.innerHeight,
+            winWidth = window.innerWidth,
             context = canvas.getContext('2d'),
-            x = getRandomInt(0, window.innerWidth),
-            y = getRandomInt(0, window.innerHeight);
+            x = getRandomInt(0, winWidth),
+            y = getRandomInt(0, winHeight);
+
+        canvas.height = winHeight * 2;
+        canvas.width = winWidth * 2;
 
         context.clearRect ( 0 , 0 , canvas.width, canvas.height );
         
-        canvas.height = window.innerHeight * 2;
-        canvas.width = window.innerWidth * 2;
-
-        canvas.style.height = window.innerHeight + 'px';
-        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = winHeight + 'px';
+        canvas.style.width = winWidth + 'px';
         
         context.scale(2,2);
 
-        for ( var e = 0, len = (canvas.width/100); e < len; e++ ) {
+        for ( var e = 0, len = (winWidth/100); e < len; e++ ) {
             var 
-                randomWidth = getRandomInt(0, window.innerWidth),
-                randomHeight = getRandomInt(0, window.innerHeight),
+                randomWidth = getRandomInt(0, winWidth),
+                randomHeight = getRandomInt(0, winHeight),
                 randomColor = "#"+("000"+(Math.random()*(1<<24)|0).toString(16)).substr(-6);
 
             context.beginPath();
