@@ -169,9 +169,13 @@ footer {
   &:after {
     display: none;
   }
+  
+  header {
+    padding-top: 40%;
+  }
 
   h1 {
-    font-size: 0.75rem;
+    font-size: 4rem;
     text-align: center;
     font-family: $proxima;
     font-weight: 700;
