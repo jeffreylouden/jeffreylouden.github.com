@@ -169,7 +169,7 @@ body {
     position: relative;
     padding: 30px 4% 4%;
     font-size: 62.5%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     background-color: white;
@@ -221,7 +221,7 @@ header, #main, #social {
     margin-bottom: 7px;
 }
 #social a {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.8rem;
     font-weight: 700;
     text-decoration: none;
@@ -233,7 +233,7 @@ header, #main, #social {
     color: #999;
 }
 footer {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.6rem;
     line-height: 1rem;
 }
@@ -261,7 +261,7 @@ header {
 .four-oh-four h1 {
     font-size: 0.75rem;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     color: white;
