@@ -21,14 +21,14 @@
         canvas.width = winWidth * 2;
 
         context.clearRect ( 0 , 0 , canvas.width, canvas.height );
-        
+
         canvas.style.height = winHeight + 'px';
         canvas.style.width = winWidth + 'px';
-        
+
         context.scale(2,2);
 
         for ( var e = 0, len = (winWidth/100); e < len; e++ ) {
-            var 
+            var
                 randomWidth = getRandomInt(0, winWidth),
                 randomHeight = getRandomInt(0, winHeight),
                 randomColor = "#"+("000"+(Math.random()*(1<<24)|0).toString(16)).substr(-6);
