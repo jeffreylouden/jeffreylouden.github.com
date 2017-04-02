@@ -207,12 +207,14 @@ body {
   color: #2D2D2D;
   width: 100%;
   box-sizing: border-box;
-  -webkit-animation: fade-in 2s;
-  animation: fade-in 2s;
+  -webkit-animation: fade-in 1s;
+  animation: fade-in 1s;
 }
 
 body a {
   color: inherit;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 h1 {
