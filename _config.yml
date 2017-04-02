@@ -1,4 +1,4 @@
-url:        	"https://jefflouden.com/"
+url:        	"https://jefflouden.com"
 permalink:      ":title/"
 exclude:        ["README.md", "CNAME", "*.sass", "node_modules", "Gruntfile.js", "package.json", "bower.json", "Gemfile"]
 owner-name:     "Jeffrey Louden"
