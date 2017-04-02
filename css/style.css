@@ -220,7 +220,6 @@ body a {
 h1 {
   font-size: 1rem;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 section,
@@ -232,13 +231,20 @@ footer {
 }
 
 #main {
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.05rem;
   margin: 30px auto;
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 #main p {
   margin-bottom: 15px;
+}
+
+.dash {
+  display: block;
+  font-size: 1rem;
+  margin: 5px 0 0;
 }
 
 header, #main, #social {
