@@ -23,7 +23,7 @@
         canvas.style.height = winHeight + 'px';
         canvas.style.width = winWidth + 'px';
 
-        context.scale(2,2);
+        context.scale(4,4);
 
         for (var e = 0, len = (winWidth + winHeight); e < len; e++) {
             var
