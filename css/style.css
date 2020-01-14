@@ -1,59 +1,139 @@
 @-webkit-keyframes noise-anim {
-  0% {clip: rect(37px, 9999px, 67px, 0);}
-  12.5% {clip: rect(3px,  9999px,  41px,  0);}
-  25% {clip: rect(56px,  9999px,  43px,  0);}
-  37.5% {clip: rect(22px,  9999px,  54px,  0);}
-  50% {clip: rect(26px,  9999px,  22px,  0);}
-  62.5% {clip: rect(15px,  9999px,  33px,  0);}
-  75% {clip: rect(64px,  9999px,  82px,  0);}
-  87.5% {clip: rect(75px,  9999px,  94px,  0);}
-  100% {clip: rect(8px,  9999px,  69px,  0);}
+    0% {
+        clip: rect(37px, 9999px, 67px, 0);
+    }
+    12.5% {
+        clip: rect(3px, 9999px, 41px, 0);
+    }
+    25% {
+        clip: rect(56px, 9999px, 43px, 0);
+    }
+    37.5% {
+        clip: rect(22px, 9999px, 54px, 0);
+    }
+    50% {
+        clip: rect(26px, 9999px, 22px, 0);
+    }
+    62.5% {
+        clip: rect(15px, 9999px, 33px, 0);
+    }
+    75% {
+        clip: rect(64px, 9999px, 82px, 0);
+    }
+    87.5% {
+        clip: rect(75px, 9999px, 94px, 0);
+    }
+    100% {
+        clip: rect(8px, 9999px, 69px, 0);
+    }
 }
 
 @keyframes noise-anim {
-  0% {clip: rect(21px,  9999px,  51px,  0);}
-  12.5% {clip: rect(50px,  9999px,  41px,  0);}
-  25% {clip: rect(59px,  9999px,  23px,  0);}
-  37.5% {clip: rect(95px,  9999px,  7px,  0);}
-  50% {clip: rect(48px,  9999px,  6px,  0);}
-  62.5% {clip: rect(90px,  9999px,  80px,  0);}
-  75% {clip: rect(14px,  9999px,  99px,  0);}
-  87.5% {clip: rect(78px,  9999px,  57px,  0);}
-  100% {clip: rect(78px,  9999px,  2px,  0);}
+    0% {
+        clip: rect(21px, 9999px, 51px, 0);
+    }
+    12.5% {
+        clip: rect(50px, 9999px, 41px, 0);
+    }
+    25% {
+        clip: rect(59px, 9999px, 23px, 0);
+    }
+    37.5% {
+        clip: rect(95px, 9999px, 7px, 0);
+    }
+    50% {
+        clip: rect(48px, 9999px, 6px, 0);
+    }
+    62.5% {
+        clip: rect(90px, 9999px, 80px, 0);
+    }
+    75% {
+        clip: rect(14px, 9999px, 99px, 0);
+    }
+    87.5% {
+        clip: rect(78px, 9999px, 57px, 0);
+    }
+    100% {
+        clip: rect(78px, 9999px, 2px, 0);
+    }
 }
 
 @-webkit-keyframes noise-anim-2 {
-  0% {clip: rect(18px,  9999px,  3px,  0);}
-  12.5% {clip: rect(73px,  9999px,  70px,  0);}
-  25% {clip: rect(91px,  9999px,  21px,  0);}
-  37.5% {clip: rect(62px,  9999px,  91px,  0);}
-  50% {clip: rect(90px,  9999px,  49px,  0);}
-  62.5% {clip: rect(1px,  9999px,  53px,  0);}
-  75% {clip: rect(32px,  9999px,  3px,  0);}
-  87.5% {clip: rect(58px,  9999px,  3px,  0);}
-  100% {clip: rect(73px,  9999px,  45px,  0);}
+    0% {
+        clip: rect(18px, 9999px, 3px, 0);
+    }
+    12.5% {
+        clip: rect(73px, 9999px, 70px, 0);
+    }
+    25% {
+        clip: rect(91px, 9999px, 21px, 0);
+    }
+    37.5% {
+        clip: rect(62px, 9999px, 91px, 0);
+    }
+    50% {
+        clip: rect(90px, 9999px, 49px, 0);
+    }
+    62.5% {
+        clip: rect(1px, 9999px, 53px, 0);
+    }
+    75% {
+        clip: rect(32px, 9999px, 3px, 0);
+    }
+    87.5% {
+        clip: rect(58px, 9999px, 3px, 0);
+    }
+    100% {
+        clip: rect(73px, 9999px, 45px, 0);
+    }
 }
 
 @keyframes noise-anim-2 {
-  0% {clip: rect(12px,  9999px,  35px,  0);}
-  12.5% {clip: rect(30px,  9999px,  95px,  0);}
-  25% {clip: rect(97px,  9999px,  82px,  0);}
-  37.5% {clip: rect(4px,  9999px,  7px,  0);}
-  50% {clip: rect(23px,  9999px,  72px,  0);}
-  62.5% {clip: rect(7px,  9999px,  9px,  0);}
-  75% {clip: rect(80px,  9999px,  53px,  0);}
-  87.5% {clip: rect(72px,  9999px,  38px,  0);}
-  100% {clip: rect(92px,  9999px,  43px,  0);}
+    0% {
+        clip: rect(12px, 9999px, 35px, 0);
+    }
+    12.5% {
+        clip: rect(30px, 9999px, 95px, 0);
+    }
+    25% {
+        clip: rect(97px, 9999px, 82px, 0);
+    }
+    37.5% {
+        clip: rect(4px, 9999px, 7px, 0);
+    }
+    50% {
+        clip: rect(23px, 9999px, 72px, 0);
+    }
+    62.5% {
+        clip: rect(7px, 9999px, 9px, 0);
+    }
+    75% {
+        clip: rect(80px, 9999px, 53px, 0);
+    }
+    87.5% {
+        clip: rect(72px, 9999px, 38px, 0);
+    }
+    100% {
+        clip: rect(92px, 9999px, 43px, 0);
+    }
 }
 
 @-webkit-keyframes fade-in {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fade-in {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 html,
@@ -137,12 +217,12 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 article,
@@ -156,227 +236,228 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 
 body {
-  line-height: 1;
+    line-height: 1;
 }
 
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+    content: "";
+    content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  min-height: 100%}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%
+}
 
-body::selection, body::-moz-selection, html::selection, html::-moz-selection {
-  background: #ff0;
+body::selection,
+body::-moz-selection,
+html::selection,
+html::-moz-selection {
+    background: #ff0;
 }
 
 body {
-  position: relative;
-  padding: 30px 4% 4%;
-  font-size: 62.5%;
-  font-family: 'Alice', sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  background-color: white;
-  color: #2D2D2D;
-  width: 100%;
-  box-sizing: border-box;
-  -webkit-animation: fade-in 1s;
-  animation: fade-in 1s;
+    position: relative;
+    padding: 30px 4% 4%;
+    font-size: 62.5%;
+    font-family: 'Alice', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    background-color: white;
+    color: #2D2D2D;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-animation: fade-in 1s;
+    animation: fade-in 1s;
 }
 
 body a {
-  color: inherit;
-  font-weight: 600;
-  text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 h1 {
-  font-size: 1rem;
-  font-weight: 600;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 section,
 footer {
-  display: block;
-  z-index: 1;
-  position: relative;
-  box-sizing: border-box;
+    display: block;
+    z-index: 1;
+    position: relative;
+    box-sizing: border-box;
 }
 
 #main {
     background: #fff;
-}
-
-#main {
-  font-size: 0.85rem;
-  line-height: 1.2rem;
-  letter-spacing: 0.05rem;
-  margin: 30px auto;
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    letter-spacing: 0.05rem;
+    margin: 30px auto;
 }
 
 #main p {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .dash {
-  display: block;
-  font-size: 1rem;
-  margin: 5px 0 0;
+    display: block;
+    font-size: 1rem;
+    margin: 5px 0 0;
 }
 
-header, #main, #social {
-  position: relative;
-  z-index: 999;
+header,
+#main,
+#social {
+    position: relative;
+    z-index: 999;
 }
 
 #lines {
-  position: fixed;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.3;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
 }
 
 #social {
-  margin: 15px 0 30px;
+    margin: 15px 0 30px;
 }
 
 #social li {
-  margin-bottom: 7px;
+    margin-bottom: 7px;
 }
 
 #social a {
-  font-family: 'Alice', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-decoration: none;
+    font-family: 'Alice', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 #social a:hover span {
-  color: #2D2D2D;
+    color: #2D2D2D;
 }
 
 #social a span {
-  color: #999;
+    color: #999;
 }
 
 footer {
-  font-family: 'Alice', sans-serif;
-  font-size: 0.6rem;
-  line-height: 1rem;
+    font-family: 'Alice', sans-serif;
+    font-size: 0.6rem;
+    line-height: 1rem;
 }
 
 @media screen and (min-width: 500px) {
-  body {
-    padding: 0 0 0 4%;
-  }
-
-  header {
-    padding-top: 60px;
-  }
-
-  #main {
-    margin: 2% 0;
-    max-width: 450px;
-  }
-
-  #social {
-    margin-bottom: 2%;
-  }
+    body {
+        padding: 0 0 0 4%;
+    }
+    header {
+        padding-top: 60px;
+    }
+    #main {
+        margin: 2% 0;
+        max-width: 450px;
+    }
+    #social {
+        margin-bottom: 2%;
+    }
 }
 
 .four-oh-four {
-  background: url("../img/tv.gif") 50% 50% no-repeat;
-  background-size: cover;
-  border: none;
+    background: url("../img/tv.gif") 50% 50% no-repeat;
+    background-size: cover;
+    border: none;
 }
 
 .four-oh-four:before,
 .four-oh-four:after {
-  display: none;
+    display: none;
 }
 
 .four-oh-four h1 {
-  font-size: 0.75rem;
-  text-align: center;
-  font-family: 'Alice', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: white;
-  position: relative;
-  width: 250px;
-  margin: 0 auto;
+    font-size: 0.75rem;
+    text-align: center;
+    font-family: 'Alice', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
 }
 
 .four-oh-four h1 a {
-  opacity: 0.2;
-  text-decoration: none;
+    opacity: 0.2;
+    text-decoration: none;
 }
 
 .four-oh-four footer {
-  display: none;
+    display: none;
 }
 
 .four-oh-four .glitch:after,
 .four-oh-four .glitch:before {
-  color: rgba(255, 255, 255, 0.2);
-  background: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .glitch {
-  position: relative;
+    position: relative;
 }
 
 .glitch:after,
 .glitch:before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  color: #2D2D2D;
-  background: white;
-  overflow: hidden;
-  clip: rect(0,  900px,  0,  0);
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    color: #2D2D2D;
+    background: white;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
 }
 
 .glitch:after {
-  left: 1px;
-  text-shadow: -1px 0 #fff;
-  -webkit-animation: noise-anim 9s infinite linear alternate-reverse;
-  animation: noise-anim 9s infinite linear alternate-reverse;
+    left: 1px;
+    text-shadow: -1px 0 #fff;
+    -webkit-animation: noise-anim 9s infinite linear alternate-reverse;
+    animation: noise-anim 9s infinite linear alternate-reverse;
 }
 
 .glitch:before {
-  left: -1px;
-  text-shadow: 1px 0 #fff;
-  -webkit-animation: noise-anim-2 10s infinite linear alternate-reverse;
-  animation: noise-anim-2 10s infinite linear alternate-reverse;
+    left: -1px;
+    text-shadow: 1px 0 #fff;
+    -webkit-animation: noise-anim-2 10s infinite linear alternate-reverse;
+    animation: noise-anim-2 10s infinite linear alternate-reverse;
 }
