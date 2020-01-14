@@ -2,14 +2,13 @@
 layout: base
 ---
 
-<header>
-	<h1 class="glitch" data-text="{{site.data.index.header}}">{{site.data.index.header}}</h1>
-</header>
 <section id="main" role="main">
+	<header>
+		<h1 class="glitch" data-text="{{site.data.index.header}}">{{site.data.index.header}}</h1>
+	</header>
 	{{site.data.index.description}}
 	<span class="dash">&mdash;</span>
+	{% include social.html %}
 </section>
-
-{% include social.html %}
 
 <canvas id="lines"></canvas>
