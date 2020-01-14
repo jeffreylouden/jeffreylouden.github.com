@@ -25,7 +25,7 @@
 
         context.scale(4,4);
 
-        for (var e = 0, len = (winWidth + winHeight); e < len; e++) {
+        for (var e = 0, len = ((winWidth + winHeight)*4); e < len; e++) {
             var
                 x = getRandomInt(0, winWidth),
                 y = getRandomInt(0, winHeight),
