@@ -200,7 +200,7 @@ body {
   position: relative;
   padding: 30px 4% 4%;
   font-size: 62.5%;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Alice', sans-serif;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   background-color: white;
@@ -228,6 +228,10 @@ footer {
   z-index: 1;
   position: relative;
   box-sizing: border-box;
+}
+
+#main {
+    background: #fff;
 }
 
 #main {
@@ -271,7 +275,7 @@ header, #main, #social {
 }
 
 #social a {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Alice', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
@@ -286,7 +290,7 @@ header, #main, #social {
 }
 
 footer {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Alice', sans-serif;
   font-size: 0.6rem;
   line-height: 1rem;
 }
@@ -324,7 +328,7 @@ footer {
 .four-oh-four h1 {
   font-size: 0.75rem;
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Alice', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   color: white;
