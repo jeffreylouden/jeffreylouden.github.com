@@ -298,8 +298,7 @@ body {
 
 body a {
     color: inherit;
-    font-weight: 600;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 h1 {
@@ -317,10 +316,12 @@ footer {
 
 #main {
     background: #fff;
+    border: 1px solid #f0f0f0;
     font-size: 0.85rem;
     line-height: 1.2rem;
     letter-spacing: 0.05rem;
     margin: 30px auto;
+    padding: 20px;
 }
 
 #main p {
@@ -382,9 +383,6 @@ footer {
 @media screen and (min-width: 500px) {
     body {
         padding: 0 0 0 4%;
-    }
-    header {
-        padding-top: 60px;
     }
     #main {
         margin: 2% 0;
