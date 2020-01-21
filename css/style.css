@@ -320,7 +320,7 @@ footer {
     background: #fff;
     border: 1px solid #f0f0f0;
     font-size: 1rem;
-    line-height: 1.35rem;
+    line-height: 1.5rem;
     letter-spacing: 0.05rem;
     margin: 30px auto;
     opacity: .85;
@@ -355,6 +355,8 @@ header,
 }
 
 #social {
+    font-size: .9rem;
+    line-height: 1.2rem;
     margin: 15px 0 30px;
 }
 
@@ -387,7 +389,7 @@ footer {
     }
     #main {
         margin: 2% 0;
-        max-width: 460px;
+        max-width: 650px;
     }
     #social {
         margin-bottom: 2%;
