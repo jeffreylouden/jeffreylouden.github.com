@@ -323,6 +323,7 @@ footer {
     line-height: 1.35rem;
     letter-spacing: 0.05rem;
     margin: 30px auto;
+    opacity: .85;
     padding: 20px;
 }
 
@@ -359,6 +360,11 @@ header,
 
 #social li {
     margin-bottom: 7px;
+}
+
+#social a {
+    border-bottom: 0;
+    margin-bottom: 0;
 }
 
 #social a:hover span {
