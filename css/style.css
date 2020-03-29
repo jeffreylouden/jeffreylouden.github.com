@@ -365,6 +365,10 @@ header,
     margin-bottom: 7px;
 }
 
+#social li:first-child::after {
+    content: '//';
+}
+
 #social a {
     border-bottom: 0;
     margin-bottom: 0;
