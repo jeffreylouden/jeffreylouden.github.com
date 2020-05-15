@@ -311,8 +311,20 @@ body a.cooking {
     color: #e33d26;
 }
 
-body a.google {
-    color: #d93025;
+body a.google-red {
+    color: #DB4437;
+}
+
+body a.google-blue {
+    color: #4285F4;
+}
+
+body a.google-yellow {
+    color: #F4B400;
+}
+
+body a.google-green {
+    color: #0F9D58;
 }
 
 body a.obama {
