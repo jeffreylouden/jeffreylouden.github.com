@@ -303,6 +303,10 @@ body a {
     text-decoration: none;
 }
 
+body a.lyft {
+    color: rgb(255, 0, 191);
+}
+
 h1 {
     font-size: 1.5rem;
     line-height: 3rem;
