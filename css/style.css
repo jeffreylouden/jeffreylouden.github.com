@@ -311,19 +311,19 @@ body a.cooking {
     color: #e33d26;
 }
 
-body a.google-red {
+body span.google-red {
     color: #DB4437;
 }
 
-body a.google-blue {
+body span.google-blue {
     color: #4285F4;
 }
 
-body a.google-yellow {
+body span.google-yellow {
     color: #F4B400;
 }
 
-body a.google-green {
+body span.google-green {
     color: #0F9D58;
 }
 
