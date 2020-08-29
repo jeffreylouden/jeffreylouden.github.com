@@ -4,14 +4,13 @@ layout: none
 
     Developer:      Jeffrey Louden
     Contact:        jeff@jefflouden.com
-    Facebook:       https://www.facebook.com/jeffreyslouden
-    Twitter:        @jeffreylouden
+    GitHub:         https://github.com/jeffreylouden
+    Location:       San Francisco, California, United States
     From:           Louisville, Kentucky, United States
 
 /* SITE */
     Last update:    {{ site.time | date: "%Y-%m-%d" }}
     Language:       English
     Doctype:        HTML5
-    IDE:            SublimeText
-    Standards:      HTML5, CSS3 [Sass]
-    Components:     Jekyll, jQuery, Modernizr, HTML5 Boilerplate, Sagan, Grunt, Bower
+    IDE:            Visual Studio Code
+    Standards:      HTML5, CSS3
