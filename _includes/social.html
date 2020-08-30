@@ -1,7 +1,15 @@
 <ul id="social" role="menu">
-	{% for link in site.data.social %}
-	<li role="menuitem">
-		<a href="{{link.url}}" title="{{link.alt_text}}">{{link.display_domain}}</a>
-	</li>
-	{% endfor %}
+  <li role="menuitem">
+    <a
+      href="https://www.vote.org/"
+      title="Register to Vote in 2020"
+      class="vote"
+      >Vote</a
+    >
+  </li>
+  {% for link in site.data.social %}
+  <li role="menuitem">
+    <a href="{{link.url}}" title="{{link.alt_text}}">{{link.display_domain}}</a>
+  </li>
+  {% endfor %}
 </ul>
