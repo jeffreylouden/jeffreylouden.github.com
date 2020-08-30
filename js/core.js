@@ -16,32 +16,31 @@
     let winWidth = window.innerWidth;
     let context = canvas.getContext("2d");
 
-    canvas.height = winHeight;
-    canvas.width = winWidth;
+    canvas.height = winHeight / 2;
+    canvas.width = winWidth / 2;
 
-    context.clearRect(0, 0, canvas.width, winHeight);
+    context.clearRect(0, 0, canvas.width, canvas.height);
 
-    canvas.style.height = winHeight + "px";
-    canvas.style.width = winWidth + "px";
+    canvas.style.height = canvas.height + "px";
+    canvas.style.width = canvas.width + "px";
 
     context.scale(2, 2);
 
     for (let e = 0, len = winHeight; e < len; e++) {
       for (let f = 0, len = winWidth; f < len; f++) {
-        let randomColor = getRandomInt(0, 1);
+        let randomColor = getRandomInt(0, 2);
 
         // Skip setting color since it would be white anyway
         if (!randomColor) continue;
 
-        context.fillRect(e, f, getRandomInt(0, 1), getRandomInt(0, 1));
+        context.fillRect(e, f, getRandomInt(0, 2), getRandomInt(0, 2));
       }
     }
 
-    if (winWidth > 400) {
-      const main = document.getElementById("main");
-      main.style.top = `${winHeight / 2 - 200}px`;
-    }
-
+    const lines = document.getElementById("lines");
+    const main = document.getElementById("main");
+    lines.style.width = canvas.width + "px";
+    lines.style.height = canvas.height + "px";
     main.style.opacity = "1";
   }
 
