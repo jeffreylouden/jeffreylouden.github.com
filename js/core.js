@@ -40,8 +40,9 @@
     if (winWidth > 400) {
       const main = document.getElementById("main");
       main.style.top = `${winHeight / 2 - 200}px`;
-      main.style.opacity = "1";
     }
+
+    main.style.opacity = "1";
   }
 
   window.addEventListener("resize", function () {
