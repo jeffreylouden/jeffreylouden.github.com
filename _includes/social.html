@@ -1,11 +1,11 @@
 <ul id="social" role="menu">
   {% for link in site.data.social %}
   <li role="menuitem">
-    <h2>
+    <h3>
       <a href="{{link.url}}" title="{{link.alt_text}}"
         >{{link.display_domain}}</a
       >
-    </h2>
+    </h3>
   </li>
   {% endfor %}
 </ul>
