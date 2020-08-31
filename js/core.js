@@ -32,24 +32,24 @@
 
     for (let e = 0, len = winHeight; e < len; e++) {
       for (let f = 0, len = winWidth; f < len; f++) {
-        const randomColor = getRandomInt(0, 3);
+        const randomColor = getRandomInt(0, 2);
 
         // Skip setting color since it would be white anyway
-        if (!randomColor) continue;
+        // if (!randomColor) continue;
 
         switch (randomColor) {
-          case 1:
+          case 0:
             context.fillStyle = color;
             break;
-          case 2:
+          case 1:
             context.fillStyle = color2;
             break;
-          case 3:
+          case 2:
             context.fillStyle = color3;
             break;
         }
 
-        context.fillRect(e, f, getRandomInt(0, 2), getRandomInt(0, 2));
+        context.fillRect(e, f, 3, 3);
       }
     }
 
