@@ -26,13 +26,16 @@
 
     context.scale(2, 2);
 
+    let color = "rgba(" + getRandomInt(0, 254) + "," + getRandomInt(0, 254) + "," + getRandomInt(0, 254) + "," + 1 + ")";
+
     for (let e = 0, len = winHeight; e < len; e++) {
       for (let f = 0, len = winWidth; f < len; f++) {
-        let randomColor = getRandomInt(0, 2);
+        let randomColor = getRandomInt(0, 1);
 
         // Skip setting color since it would be white anyway
         if (!randomColor) continue;
 
+        context.fillStyle = color;
         context.fillRect(e, f, getRandomInt(0, 2), getRandomInt(0, 2));
       }
     }
