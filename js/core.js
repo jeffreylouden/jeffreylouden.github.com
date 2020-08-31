@@ -26,16 +26,29 @@
 
     context.scale(2, 2);
 
-    let color = "rgba(" + getRandomInt(0, 254) + "," + getRandomInt(0, 254) + "," + getRandomInt(0, 254) + "," + 1 + ")";
+    const color = "rgba(" + getRandomInt(0, 254) + "," + getRandomInt(0, 254) + "," + getRandomInt(0, 254) + "," + 1 + ")";
+    const color2 = "rgba(" + getRandomInt(0, 254) + "," + getRandomInt(0, 254) + "," + getRandomInt(0, 254) + "," + 1 + ")";
+    const color3 = "rgba(" + getRandomInt(0, 254) + "," + getRandomInt(0, 254) + "," + getRandomInt(0, 254) + "," + 1 + ")";
 
     for (let e = 0, len = winHeight; e < len; e++) {
       for (let f = 0, len = winWidth; f < len; f++) {
-        let randomColor = getRandomInt(0, 1);
+        const randomColor = getRandomInt(0, 3);
 
         // Skip setting color since it would be white anyway
         if (!randomColor) continue;
 
-        context.fillStyle = color;
+        switch (randomColor) {
+          case 1:
+            context.fillStyle = color;
+            break;
+          case 2:
+            context.fillStyle = color2;
+            break;
+          case 3:
+            context.fillStyle = color3;
+            break;
+        }
+
         context.fillRect(e, f, getRandomInt(0, 2), getRandomInt(0, 2));
       }
     }
