@@ -179,7 +179,7 @@ h1 {
     text-align: left;
     font-family: 'Alice', serif;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 2rem;
     line-height: 1;
     padding: 15px;
     border: 2px solid #000;
@@ -188,38 +188,36 @@ h1 {
 }
 
 #social {
-    color: #000;
     font-family: 'Inconsolata', monospace;
     font-size: 1rem;
     line-height: 1.4rem;
     padding: 10px 20px;
     text-align: center;
-    position: absolute;
-    bottom: 4px;
+    position: relative;
+    top: 6px;
     background: #000;
     color: #fff;
-    display: inline-block;
-    right: 4px;
+    left: 1px;
 }
 
 header {
     position: absolute;
-    top: 40%;
-    left: -5%;
+    top: 150px;
+    left: calc(50% - 122px);
     font-size: 1rem;
     line-height: 2rem;
     z-index: 999;
-    width: 110%;
 }
 
 #main {
     display: inline-block;
     bottom: 0;
-    left: 25%;
+    left: 0;
     right: 0;
-    top: 25%;
+    top: 0;
     opacity: 0;
     transition: opacity 200ms linear;
+    z-index: 100;
 }
 
 #lines {
@@ -229,7 +227,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 0;
-    border: 4px solid #000;
+    /* border: 4px solid #000; */
 }
 
 #vote {
@@ -245,6 +243,7 @@ header {
     line-height: 2rem;
     background: #0071bc;
     transition: background 500ms;
+    z-index: 101;
 }
 
 #vote:hover {
@@ -253,11 +252,12 @@ header {
 }
 
 @media only screen and (min-width: 500px) {
-    h1 {
-        font-size: 2rem;
+    header {
+        top: calc(50% - 122px);
     }
 
     #social {
+        left: -3px;
         text-align: right;
     }
 

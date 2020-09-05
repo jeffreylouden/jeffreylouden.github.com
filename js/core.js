@@ -30,14 +30,10 @@ function generateColors(maxColors) {
     winHeight = window.innerHeight;
     winWidth = window.innerWidth;
 
-    canvas.height = winHeight / 2;
-    canvas.width = winWidth / 2;
+    canvas.height = winHeight;
+    canvas.width = winWidth;
 
-
-    canvas.style.height = canvas.height + "px";
-    canvas.style.width = canvas.width + "px";
-
-    context.scale(2, 2);
+    context.scale(3, 3);
 
   }
 
