@@ -219,6 +219,7 @@ header {
     right: 0;
     top: 25%;
     opacity: 0;
+    transition: opacity 200ms linear;
 }
 
 #lines {
