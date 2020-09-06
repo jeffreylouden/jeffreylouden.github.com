@@ -50,8 +50,7 @@ function generateColors(maxColors) {
       }
     }
 
-    const main = document.getElementById("main");
-    main.style.opacity = 1;
+    canvas.style.opacity = 1;
 
   }
 
