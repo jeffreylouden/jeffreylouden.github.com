@@ -46,7 +46,7 @@ function generateColors(maxColors) {
         const randomColor = getRandomInt(0, 4);
 
         context.fillStyle = colorArray[randomColor];
-        context.fillRect(e, f, getRandomInt(0, 1), getRandomInt(0, 1));
+        context.fillRect(e, f, getRandomInt(0, 2), getRandomInt(0, 2));
       }
     }
 
