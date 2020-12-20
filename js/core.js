@@ -55,14 +55,6 @@ function generateColors(maxColors) {
 
   }
 
-  function showElectionBanner() {
-    const today = new Date();
-    const electionDay = new Date('2020-11-03');
-
-    if (today < electionDay) {
-      document.getElementById('vote').style.display = 'block';
-    }
-  }
 
   window.addEventListener("resize", function () {
     sizeCanvas();
@@ -72,6 +64,5 @@ function generateColors(maxColors) {
   window.onload = function () {
     sizeCanvas();
     createNoise();
-    showElectionBanner();
   };
 })(window, document);

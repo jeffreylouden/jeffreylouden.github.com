@@ -237,22 +237,6 @@ header {
     transition: opacity 200ms linear;
 }
 
-#vote {
-    color: #fff;
-    display: none;
-    padding: 5px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-family: 'Inconsolata', monospace;
-    font-size: 1.1rem;
-    line-height: 2rem;
-    background: #0071bc;
-    transition: background 500ms;
-    z-index: 101;
-}
 
 .feather {
     position: relative;
@@ -261,13 +245,6 @@ header {
     transition: left 150ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-#vote a {
-    color: #fff;
-}
-
-#vote a:hover .feather {
-    left: -6px;
-}
 
 @media only screen and (min-width: 500px) {
     header {
