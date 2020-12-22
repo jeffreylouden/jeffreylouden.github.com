@@ -87,6 +87,12 @@ ul {
     font-weight: 600;
 }
 
+.underline {
+    border-bottom: 1px solid var(--lightgray);
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+}
+
 #connect {
     font-size: 1.2rem;
     margin-top: 40px;
