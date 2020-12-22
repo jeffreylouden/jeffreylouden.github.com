@@ -130,15 +130,6 @@ table {
     border-spacing: 0
 }
 
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    min-height: 100%;
-    overflow: hidden
-}
-
 body::-moz-selection,
 body::selection,
 html::-moz-selection,
@@ -148,9 +139,14 @@ html::selection {
 
 /* End Reset */
 
+em {
+    font-style: italic;
+}
+
 :root {
     --black: #111419;
     --gray: #8d949e;
+    --lightgray: #ddd;
     --white: #eee;
 }
 
@@ -160,7 +156,6 @@ body {
     color: var(--black);
     font-size: 62.5%;
     margin: 10%;
-    max-width: 420px;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
 }
@@ -170,6 +165,7 @@ main {
     font-size: 0.9rem;
     font-weight: 500;
     line-height: 1.4rem;
+    max-width: 420px;
 }
 
 main a {
@@ -192,19 +188,36 @@ header {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
     font-family: 'Crimson Text', serif;
-    font-weight: 500;
 }
 
 h1 {
     display: inline;
+    font-weight: 500;
 }
 
 h2 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
     line-height: 2;
+}
+
+h3 {
+    border-bottom: 1px solid var(--black);
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
 ul {
@@ -232,4 +245,53 @@ ul {
     content: '\00B7';
 }
 
-@media only screen and (min-width: 500px) {}
+/* Resume */
+
+.resume {
+    margin: 40px;
+}
+
+.resume a {
+    text-decoration: underline;
+}
+
+.resume main {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.resume header {
+    margin-bottom: 40px;
+}
+
+.resume h2 {
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'Courier', monospace;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.pronouns {
+    font-size: 1rem;
+}
+
+.pronouns::before {
+    color: var(--gray);
+    content: '\00B7  ';
+}
+
+
+#experience li:not(:first-child) {
+    margin-bottom: 30px;
+}
+
+.sabbatical {
+    border-top: 1px solid var(--lightgray);
+    border-bottom: 1px solid var(--lightgray);
+    margin: 20px 0;
+    padding: 5px;
+    text-align: center;
+}
