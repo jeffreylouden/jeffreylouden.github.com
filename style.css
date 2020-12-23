@@ -1,3 +1,7 @@
+li::marker {
+    display: none !important;
+}
+
 :root {
     --black: #111419;
     --gray: #8d949e;
