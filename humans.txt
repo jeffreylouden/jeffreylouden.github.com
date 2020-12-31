@@ -2,15 +2,15 @@
 layout: none
 ---
 
-    Developer:      Jeffrey Louden
-    Contact:        jeff [at] jefflouden [dot] com
-    GitHub:         https://github.com/jeffreylouden
-    Location:       San Francisco, California, United States
-    From:           Louisville, Kentucky, United States
+Developer:      Jeffrey Louden
+Contact:        jeff [at] jefflouden [dot] com
+GitHub:         https://github.com/jeffreylouden
+Location:       San Francisco, California, United States
+From:           Louisville, Kentucky, United States
 
 /* SITE */
-    Last update:    {{ site.time | date: "%Y-%m-%d" }}
-    Language:       English
-    Doctype:        HTML5
-    IDE:            Visual Studio Code
-    Standards:      HTML5, CSS3
+Last update:    {{ site.time | date: "%Y-%m-%d" }}
+Language:       English
+Doctype:        HTML5
+IDE:            Visual Studio Code
+Standards:      HTML5, CSS3

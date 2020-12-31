@@ -9,7 +9,7 @@ exclude:
     "package.json",
     "bower.json",
     "Gemfile",
-  ]
+    ]
 owner-name: "Jeffrey Louden"
 owner-page: "https://jefflouden.com/"
 owner-email: "jeff [at] jefflouden [dot] com"
