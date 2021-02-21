@@ -1,9 +1,15 @@
 pronouns: "he/him/his"
 email: "jeff [at] jefflouden [dot] com"
+linkedin_url: "https://www.linkedin.com/in/jeffreylouden/"
 introduction: "Mission-driven leader with a blend of deep technical expertise and a customer-first product vision. I have a proven record of building diverse, inclusive, and empathetic teams that deliver exceptional quality products."
 
 experience: "Professional Experience"
 positions:
+  - class: "time"
+    duration: "03/2021 - Present"
+    company: "Time, Inc."
+    url: "https://www.time.com"
+    role: "VP, Software Engineering"
   - class: "lyft"
     duration: "05/2020 - 11/2020"
     company: "Lyft"
