@@ -5,7 +5,7 @@ layout: none
 Developer:      Jeffrey Louden
 Contact:        jeff [at] jefflouden [dot] com
 GitHub:         https://github.com/jeffreylouden
-Location:       San Francisco, California, United States
+Location:       Great Barrington, Massachusetts, United States
 From:           Louisville, Kentucky, United States
 
 /* SITE */
